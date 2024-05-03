@@ -169,20 +169,20 @@
 
   \subsection{Matrix}
   \label{sect:Matrix}
-    An M x N matrix operation. Each cell of the matrix is provided by a MatrixElement object. Missing elements should be considered to equal 0.
+    A matrix operation. Each cell of the matrix is provided by a MatrixElement object. Missing elements should be considered to equal 0.
 
     \noindent \textbf{constraint} \newline
-    \indent    \textbf{detail:} Matrix.element maxlength = M*N \newline
+    \indent    \textbf{detail:} Matrix.element maxlength = nrow*ncolumns \newline
 
 
-    \subsubsection{Matrix.M}
-      \textbf{vodml-id: Matrix.M} \newline
+    \subsubsection{Matrix.nrows}
+      \textbf{vodml-id: Matrix.nrows} \newline
       \textbf{type: \hyperref[sect:ivoa]{ivoa:nonnegativeInteger}} \newline
       \textbf{multiplicity: 1} \newline 
       Number of rows in the matrix.
 
-    \subsubsection{Matrix.N}
-      \textbf{vodml-id: Matrix.N} \newline
+    \subsubsection{Matrix.ncolumns}
+      \textbf{vodml-id: Matrix.ncolumns} \newline
       \textbf{type: \hyperref[sect:ivoa]{ivoa:nonnegativeInteger}} \newline
       \textbf{multiplicity: 1} \newline 
       Number of columns in the matrix.
@@ -191,20 +191,20 @@
       \textbf{vodml-id: Matrix.element} \newline
       \textbf{type: \hyperref[sect:MatrixElement]{trans:MatrixElement}} \newline
       \textbf{multiplicity: 0..*} \newline 
-      Collection of MatrixElements which define each cell of the matrix. The total number of elements MUST NOT exceed M*N, any missing elements result in a cell with value=0.0.
+      Collection of MatrixElements which define each cell of the matrix. The total number of elements MUST NOT exceed nrows*ncolumns, any missing elements result in a cell with value=0.0.
 
   \subsection{MatrixElement}
   \label{sect:MatrixElement}
-    The value of cell m,n in an M x N matrix.
+    The value of cell (row,column) in a 2-dimensional matrix.
 
-    \subsubsection{MatrixElement.m}
-      \textbf{vodml-id: MatrixElement.m} \newline
+    \subsubsection{MatrixElement.row}
+      \textbf{vodml-id: MatrixElement.row} \newline
       \textbf{type: \hyperref[sect:ivoa]{ivoa:nonnegativeInteger}} \newline
       \textbf{multiplicity: 1} \newline 
       Matrix cell row number.
 
-    \subsubsection{MatrixElement.n}
-      \textbf{vodml-id: MatrixElement.n} \newline
+    \subsubsection{MatrixElement.column}
+      \textbf{vodml-id: MatrixElement.column} \newline
       \textbf{type: \hyperref[sect:ivoa]{ivoa:nonnegativeInteger}} \newline
       \textbf{multiplicity: 1} \newline 
       Matrix cell column number.
