@@ -8,8 +8,8 @@
 % see ivoatexDoc for what group names to use here
 \ivoagroup{Data Model Working Group}
 
-\author{Arnold Rots}
 \author{Mark Cresitello-Dittmar}
+\author{Arnold Rots}
 \author{David Berry}
 \author{Steven Crawford}
 \author{Nadia Dencheva}
@@ -307,6 +307,10 @@ This model depends loosly on the IVOA Coordinates model in that it references co
 \item Added TransformSet element, providing link to Coordinate Systems associated with Transform.
 \item Replaced explicit forward and inverse operation on Mapping with BiDirectionalMap which references forward and inverse Mapping instances.  So now, any Mapping MAY be bi-directional, but can always construct a BiDirectional Mapping.  Removes TOperational layer.
 \item Modified TCompoundMap representation, the composition of parent object is supposed to be invalid.  Now represented as a List of Mapping references.
+\end{itemize}
+2024-Apr-15:
+\begin{itemize}
+\item Rename Unit operation Identity (git Issue \#2)
 \end{itemize}
 
 

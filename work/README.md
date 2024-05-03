@@ -83,7 +83,7 @@ VO-DML/XML files and generation of the standard HTML documentation.
   
     * locates the vo-dml/XML file using the information contained in build.gradle.kts
     * executes the translation task
-    * output is written to ./build/generated/docs/vodml
+    * output is written to ./build/doc
 
 
 * Schema Generation

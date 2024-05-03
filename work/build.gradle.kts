@@ -32,7 +32,7 @@ vodml {
                            ))
 
      // where to put output from vodmlDoc task
-     outputDocDir.set(layout.projectDirectory.dir("std/generated"))
+     outputDocDir.set(layout.projectDirectory.dir("build/doc"))
 
      // where to put output from vodmlSite task ( toolkit 0.4.5 )
      // outputSiteDir.set(layout.projectDirectory.dir("docs/generated"))
