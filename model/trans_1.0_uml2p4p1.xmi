@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><xmi:XMI xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:IVOA_UML_Profile="http:///schemas/IVOA_UML_Profile/_bAYecAmHEe-zU_mOK6wlpg/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:version="2.1" xsi:schemaLocation="http://www.eclipse.org/uml2/3.0.0/UML http://schema.omg.org/spec/UML/20110701 http:///schemas/IVOA_UML_Profile/_bAYecAmHEe-zU_mOK6wlpg/0 IVOA_UML_Profile.profile.xmi#_bAZFhwmHEe-zU_mOK6wlpg">
-  <uml:Model xmi:id="_bAXQUAmHEe-zU_mOK6wlpg" name="trans">
-    <eAnnotations xmi:id="_bAXQUQmHEe-zU_mOK6wlpg" source="Objing">
-      <contents xmi:type="uml:Property" xmi:id="_bAXQUgmHEe-zU_mOK6wlpg" name="exporterVersion">
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_bAXQUwmHEe-zU_mOK6wlpg" value="3.0.0"/>
+<?xml version="1.0" encoding="UTF-8"?><xmi:XMI xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:IVOA_UML_Profile="http:///schemas/IVOA_UML_Profile/_4h5JoAmJEe-zU_mOK6wlpg/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:version="2.1" xsi:schemaLocation="http://www.eclipse.org/uml2/3.0.0/UML http://schema.omg.org/spec/UML/20110701 http:///schemas/IVOA_UML_Profile/_4h5JoAmJEe-zU_mOK6wlpg/0 IVOA_UML_Profile.profile.xmi#_4i5PNwmJEe-zU_mOK6wlpg">
+  <uml:Model xmi:id="_4h37gAmJEe-zU_mOK6wlpg" name="trans">
+    <eAnnotations xmi:id="_4h37gQmJEe-zU_mOK6wlpg" source="Objing">
+      <contents xmi:type="uml:Property" xmi:id="_4h37ggmJEe-zU_mOK6wlpg" name="exporterVersion">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_4h37gwmJEe-zU_mOK6wlpg" value="3.0.0"/>
       </contents>
     </eAnnotations>
-    <ownedComment xmi:type="uml:Comment" xmi:id="_bAXQVAmHEe-zU_mOK6wlpg">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_4h37hAmJEe-zU_mOK6wlpg">
       <body>The transform model defines objects which can be used to construct expressions representing the relation between two coordinate systems.  These may be used to transform coordinates and other objects defined in one coordinate system into corresponding objects in another coordinate system.  There are two primary components to the model, the "Mapping", and the "TransformSet".
 
 The "Mapping" object defines how to transform a set of "input" scalar values into a corresponding set of "output" scalar values.   The Mapping supports transforms in either direction via "operations" which we refer to as the forward and inverse operations.  The forward operation transforms the mapping inputs into mapping outputs.  The inverse operation transforms the mapping outputs into mapping inputs.  
@@ -15,12 +15,12 @@ The "TransformSet" object gives physical context to the "Mapping" by relating a 
 Since a mapping expression can involve multiple steps between end points, we separate these features, such that the Mapping provides the path, and the TransformSet associates a Mapping with its source and target coordinate systems.
 </body>
     </ownedComment>
-    <ownedRule xmi:type="uml:Constraint" xmi:id="_bAXQVQmHEe-zU_mOK6wlpg" constrainedElement="_bAX35wmHEe-zU_mOK6wlpg">
-      <specification xmi:type="uml:LiteralString" xmi:id="_bAX3YAmHEe-zU_mOK6wlpg" value="element maxlength = nrows*ncolumns"/>
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_4h37hQmJEe-zU_mOK6wlpg" constrainedElement="_4h38DQmJEe-zU_mOK6wlpg">
+      <specification xmi:type="uml:LiteralString" xmi:id="_4h37hgmJEe-zU_mOK6wlpg" value="element maxlength = nrows*ncolumns"/>
     </ownedRule>
-    <packagedElement xmi:type="uml:InformationItem" xmi:id="_bAX3YQmHEe-zU_mOK6wlpg" name="WCS Transform Model V1.0"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX3YgmHEe-zU_mOK6wlpg" name="Mapping" isAbstract="true">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3YwmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:InformationItem" xmi:id="_4h37hwmJEe-zU_mOK6wlpg" name="WCS Transform Model V1.0"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h37iAmJEe-zU_mOK6wlpg" name="Mapping" isAbstract="true">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h37iQmJEe-zU_mOK6wlpg">
         <body>The "Mapping" object defines how to transform a set of "input" scalar values into a corresponding set of "output" scalar values.   The Mapping supports transforms in either direction via "operations" which we refer to here as the forward and inverse operations.  The forward operation transforms the mapping inputs into mapping outputs.  The inverse operation transforms the mapping outputs into mapping inputs.  
 
 There is possibility here for confusion regarding the meaning of the words "input" and "output". A clear distinction should be drawn between the inputs and outputs of a mapping and those of an operation.  The inputs and outputs of a mapping are the same as the inputs and outputs of the mapping's forward operation, but are the reverse of the inputs and outputs of the mapping's inverse operation. Thus, the inputs of the inverse operation are the outputs of the mapping, etc.
@@ -39,8 +39,8 @@ In this model, we describe three flavors of mappings which allow specifications 
 
 </body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX3ZAmHEe-zU_mOK6wlpg" name="invert" visibility="public" type="_bAX4dgmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3ZQmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h37igmJEe-zU_mOK6wlpg" name="invert" visibility="public" type="_4h38nAmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37iwmJEe-zU_mOK6wlpg">
           <body>Boolean flag indicates that the Mapping content defines its inverse operation rather than its forward operation and so the Mapping should be inverted before being used. In other words, the forward operation of the Mapping should be implemented using the inverse operation implied by the Mapping's contents, and  vice versa.
 
 For many operations, the inverse transformation can be directly derived from the forward transform.  For instance, the inverse of a transform that simply adds a constant to each input is a transform of the same type, with a negated constant.  However, there are potentially operations for which this cannot be done.  For instance, the inverse of a transform that maps 3D Cartesian coordinates to spherical coordinates cannot be expressed by the same algorithm.  This flag indicates that it should be used in its inverse sense.  
@@ -48,202 +48,202 @@ For many operations, the inverse transformation can be directly derived from the
 In addition, the invert flag allows a complex compound transformation to be be inverted simply by toggling its invert flag.  Without such a flag each component would need to be re-written to represent its inverse (if possible), and the order of serial transformations would need to be reversed - a much more complex and error prone process.
 </body>
         </ownedComment>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX3ZgmHEe-zU_mOK6wlpg"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h37jAmJEe-zU_mOK6wlpg"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX3ZwmHEe-zU_mOK6wlpg" name="CompoundMap" isAbstract="true">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3aAmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h37jQmJEe-zU_mOK6wlpg" name="CompoundMap" isAbstract="true">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h37jgmJEe-zU_mOK6wlpg">
         <body>Abstract class to facilitate the combination of Mappings in various ways.  Since they are themselves mappings, they can be used as a components in other compound mappings to create arbitrarily complex transform expressions.  
 </body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX3aQmHEe-zU_mOK6wlpg" general="_bAX3YgmHEe-zU_mOK6wlpg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX3agmHEe-zU_mOK6wlpg" name="cptMap" visibility="public" type="_bAX42wmHEe-zU_mOK6wlpg" isOrdered="true" aggregation="composite" association="_bAX3bQmHEe-zU_mOK6wlpg">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3awmHEe-zU_mOK6wlpg">
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h37jwmJEe-zU_mOK6wlpg" general="_4h37iAmJEe-zU_mOK6wlpg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h37kAmJEe-zU_mOK6wlpg" name="cptMap" visibility="public" type="_4h4iqwmJEe-zU_mOK6wlpg" isOrdered="true" aggregation="composite" association="_4h37kwmJEe-zU_mOK6wlpg">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37kQmJEe-zU_mOK6wlpg">
           <body>List of component mappings.  Joins multiple mappings together to form a single unit.  The interpretation of the list set depends on the particular sub-class of CompoundMap.
 </body>
         </ownedComment>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bAX3bAmHEe-zU_mOK6wlpg" value="*"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4h37kgmJEe-zU_mOK6wlpg" value="*"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_bAX3bQmHEe-zU_mOK6wlpg" memberEnd="_bAX3agmHEe-zU_mOK6wlpg _bAX3bgmHEe-zU_mOK6wlpg">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_bAX3bgmHEe-zU_mOK6wlpg" visibility="public" type="_bAX3ZwmHEe-zU_mOK6wlpg" association="_bAX3bQmHEe-zU_mOK6wlpg"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_4h37kwmJEe-zU_mOK6wlpg" memberEnd="_4h37kAmJEe-zU_mOK6wlpg _4h37lAmJEe-zU_mOK6wlpg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_4h37lAmJEe-zU_mOK6wlpg" visibility="public" type="_4h37jQmJEe-zU_mOK6wlpg" association="_4h37kwmJEe-zU_mOK6wlpg"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX3bwmHEe-zU_mOK6wlpg" name="ComposeMap">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3cAmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h37lQmJEe-zU_mOK6wlpg" name="ComposeMap">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h37lgmJEe-zU_mOK6wlpg">
         <body>Combines the component mappings in series. This allows the building of multi-stage transforms such as a Matrix operation followed by a WCS Projection.  When the invert flag is 'True', the forward operation of the ComposeMap is defined by the inverse of the content, iterating the component list in reverse order, executing the inverse operation of each component.
 </body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX3cQmHEe-zU_mOK6wlpg" general="_bAX3ZwmHEe-zU_mOK6wlpg"/>
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h37lwmJEe-zU_mOK6wlpg" general="_4h37jQmJEe-zU_mOK6wlpg"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX3cgmHEe-zU_mOK6wlpg" name="ConcatenateMap">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3cwmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h37mAmJEe-zU_mOK6wlpg" name="ConcatenateMap">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h37mQmJEe-zU_mOK6wlpg">
         <body>Combines the component mappings in parallel. This enables the building of a mapping which covers the full dimension space of the input. Axes are distributed to the component mappings in order. For example, to perform a shift on a 2-dimensional coordinate (x,y), one would join two Shift maps giving the offset in x and y respectively. 
 When the 'invert' flag is True, the forward operation of the ConcatenateMap is defined by applying the inverse operations of the component mappings.</body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX3dAmHEe-zU_mOK6wlpg" general="_bAX3ZwmHEe-zU_mOK6wlpg"/>
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h37mgmJEe-zU_mOK6wlpg" general="_4h37jQmJEe-zU_mOK6wlpg"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Enumeration" xmi:id="_bAX3dQmHEe-zU_mOK6wlpg" name="InterpolationMethod">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3dgmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_4h37mwmJEe-zU_mOK6wlpg" name="InterpolationMethod">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h37nAmJEe-zU_mOK6wlpg">
         <body>Enumeration of interpolation methods to control the interpretation of data between known points in operations such as Lookup.</body>
       </ownedComment>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3dwmHEe-zU_mOK6wlpg" name="None">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3eAmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37nQmJEe-zU_mOK6wlpg" name="None">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37ngmJEe-zU_mOK6wlpg">
           <body>No interpolation method specified, interpretation between points is undefined.</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3eQmHEe-zU_mOK6wlpg" name="Nearest">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3egmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37nwmJEe-zU_mOK6wlpg" name="Nearest">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37oAmJEe-zU_mOK6wlpg">
           <body>Nearest neighbor is selected</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3ewmHEe-zU_mOK6wlpg" name="Linear">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3fAmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37oQmJEe-zU_mOK6wlpg" name="Linear">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37ogmJEe-zU_mOK6wlpg">
           <body>Assume a linear progression between points.</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3fQmHEe-zU_mOK6wlpg" name="Spline">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3fgmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37owmJEe-zU_mOK6wlpg" name="Spline">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37pAmJEe-zU_mOK6wlpg">
           <body>Perform a spline interpolation through the points.  2-dimensional only.</body>
         </ownedComment>
       </ownedLiteral>
     </packagedElement>
-    <packagedElement xmi:type="uml:Enumeration" xmi:id="_bAX3fwmHEe-zU_mOK6wlpg" name="SkyProjectionType">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3gAmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_4h37pQmJEe-zU_mOK6wlpg" name="SkyProjectionType">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h37pgmJEe-zU_mOK6wlpg">
         <body>Enumeration of non-linear celestial projection algorithm codes as listed in Table 13 of the FITS WCS paper II.</body>
       </ownedComment>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3gQmHEe-zU_mOK6wlpg" name="AZP">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3ggmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37pwmJEe-zU_mOK6wlpg" name="AZP">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37qAmJEe-zU_mOK6wlpg">
           <body>Zenithal perspective</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3gwmHEe-zU_mOK6wlpg" name="SZP">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3hAmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37qQmJEe-zU_mOK6wlpg" name="SZP">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37qgmJEe-zU_mOK6wlpg">
           <body>Slant zenithal perspective</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3hQmHEe-zU_mOK6wlpg" name="TAN">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3hgmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37qwmJEe-zU_mOK6wlpg" name="TAN">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37rAmJEe-zU_mOK6wlpg">
           <body>Gnomonic (Tangent plane projection)</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3hwmHEe-zU_mOK6wlpg" name="STG">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3iAmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37rQmJEe-zU_mOK6wlpg" name="STG">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37rgmJEe-zU_mOK6wlpg">
           <body>Stereographic</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3iQmHEe-zU_mOK6wlpg" name="SIN">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3igmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37rwmJEe-zU_mOK6wlpg" name="SIN">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37sAmJEe-zU_mOK6wlpg">
           <body>Slant orthographic (Sine projection)</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3iwmHEe-zU_mOK6wlpg" name="ARC">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3jAmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37sQmJEe-zU_mOK6wlpg" name="ARC">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37sgmJEe-zU_mOK6wlpg">
           <body>Zenithal equidistant</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3jQmHEe-zU_mOK6wlpg" name="ZPN">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3jgmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37swmJEe-zU_mOK6wlpg" name="ZPN">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37tAmJEe-zU_mOK6wlpg">
           <body>Zenithal polynomial</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3jwmHEe-zU_mOK6wlpg" name="ZEA">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3kAmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37tQmJEe-zU_mOK6wlpg" name="ZEA">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37tgmJEe-zU_mOK6wlpg">
           <body>Zenithal equal-area</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3kQmHEe-zU_mOK6wlpg" name="AIR">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3kgmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37twmJEe-zU_mOK6wlpg" name="AIR">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37uAmJEe-zU_mOK6wlpg">
           <body>Airy</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3kwmHEe-zU_mOK6wlpg" name="CYP">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3lAmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37uQmJEe-zU_mOK6wlpg" name="CYP">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37ugmJEe-zU_mOK6wlpg">
           <body>Cylindrical perspective</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3lQmHEe-zU_mOK6wlpg" name="CEA">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3lgmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37uwmJEe-zU_mOK6wlpg" name="CEA">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37vAmJEe-zU_mOK6wlpg">
           <body>Cylindrical equal-area</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3lwmHEe-zU_mOK6wlpg" name="CAR">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3mAmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37vQmJEe-zU_mOK6wlpg" name="CAR">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37vgmJEe-zU_mOK6wlpg">
           <body>Plate carree</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3mQmHEe-zU_mOK6wlpg" name="MER">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3mgmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37vwmJEe-zU_mOK6wlpg" name="MER">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37wAmJEe-zU_mOK6wlpg">
           <body>Mercator</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3mwmHEe-zU_mOK6wlpg" name="SFL">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3nAmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37wQmJEe-zU_mOK6wlpg" name="SFL">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37wgmJEe-zU_mOK6wlpg">
           <body>Sanson-Flamsteed</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3nQmHEe-zU_mOK6wlpg" name="PAR">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3ngmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37wwmJEe-zU_mOK6wlpg" name="PAR">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37xAmJEe-zU_mOK6wlpg">
           <body>Parabolic</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3nwmHEe-zU_mOK6wlpg" name="MOL">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3oAmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37xQmJEe-zU_mOK6wlpg" name="MOL">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37xgmJEe-zU_mOK6wlpg">
           <body>Mollweide</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3oQmHEe-zU_mOK6wlpg" name="AIT">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3ogmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37xwmJEe-zU_mOK6wlpg" name="AIT">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37yAmJEe-zU_mOK6wlpg">
           <body>Hammer-Aitoff</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3owmHEe-zU_mOK6wlpg" name="COP">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3pAmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37yQmJEe-zU_mOK6wlpg" name="COP">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37ygmJEe-zU_mOK6wlpg">
           <body>Conic perspective</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3pQmHEe-zU_mOK6wlpg" name="COE">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3pgmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37ywmJEe-zU_mOK6wlpg" name="COE">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37zAmJEe-zU_mOK6wlpg">
           <body>Conic equal-area</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3pwmHEe-zU_mOK6wlpg" name="COD">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3qAmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37zQmJEe-zU_mOK6wlpg" name="COD">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37zgmJEe-zU_mOK6wlpg">
           <body>Conic equidistant</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3qQmHEe-zU_mOK6wlpg" name="COO">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3qgmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h37zwmJEe-zU_mOK6wlpg" name="COO">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h370AmJEe-zU_mOK6wlpg">
           <body>Conic orthomorphic</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3qwmHEe-zU_mOK6wlpg" name="BON">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3rAmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h370QmJEe-zU_mOK6wlpg" name="BON">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h370gmJEe-zU_mOK6wlpg">
           <body>Bonne equal-area</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3rQmHEe-zU_mOK6wlpg" name="PCO">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3rgmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h370wmJEe-zU_mOK6wlpg" name="PCO">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h371AmJEe-zU_mOK6wlpg">
           <body>Polyconic</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3rwmHEe-zU_mOK6wlpg" name="TSC">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3sAmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h371QmJEe-zU_mOK6wlpg" name="TSC">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h371gmJEe-zU_mOK6wlpg">
           <body>Tangential spherical cube</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3sQmHEe-zU_mOK6wlpg" name="CSC">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3sgmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h371wmJEe-zU_mOK6wlpg" name="CSC">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h372AmJEe-zU_mOK6wlpg">
           <body>COBE Quadrilateralized spherical cube</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX3swmHEe-zU_mOK6wlpg" name="QSC">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3tAmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h372QmJEe-zU_mOK6wlpg" name="QSC">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h372gmJEe-zU_mOK6wlpg">
           <body>Quadrilateralized spherical cube</body>
         </ownedComment>
       </ownedLiteral>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX3tQmHEe-zU_mOK6wlpg" name="Permute">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3tgmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h372wmJEe-zU_mOK6wlpg" name="Permute">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h373AmJEe-zU_mOK6wlpg">
         <body>Permute the order and possibly number of dimensions between operations. This operation facilitates the workflow through the operation sequence. It is comprised of an ordered axismap list defining the output axis sequence in terms of the source (input) axes. It supports the reorder, duplication, and dropping of dimensions. 
    Reorder Example: We have a 3-dimensional coordinate (x,y,z) and wish to perform a 2-dimensional transform on the (x,z) plane. Define a Permute operation to reorder the axes from (x,y,z) to (y,x,z) using an axismap list specifying the new axis order, [2,1,3]. The results feed into the next step ( 1D + 2D operations ). 
    Duplicate Example: We have 2-dimensional coordinate (x,y) feeding two Polynomial2D operations to form (x',y'). Define a Permute operation with axismap list specifying sourceAxis set [1,2,1,2]. The result feeds into the next step ( Polynomial2D + Polynomial2D operations). 
@@ -251,628 +251,628 @@ When the 'invert' flag is True, the forward operation of the ConcatenateMap is d
    Add Example: We have a 2-dimensional operation feeding into axes [1,3] of a 3-dimensional operation. Define a Permute operation with numSourceAxes=2; and sourceAxis set [1,0,2] where output axis 2 also specifies the fixed seed value.
 </body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX3twmHEe-zU_mOK6wlpg" general="_bAX3YgmHEe-zU_mOK6wlpg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX3uAmHEe-zU_mOK6wlpg" name="axismap" visibility="public" type="_bAX3wAmHEe-zU_mOK6wlpg" isOrdered="true" aggregation="composite" association="_bAX3vgmHEe-zU_mOK6wlpg">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3uQmHEe-zU_mOK6wlpg">
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h373QmJEe-zU_mOK6wlpg" general="_4h37iAmJEe-zU_mOK6wlpg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h373gmJEe-zU_mOK6wlpg" name="axismap" visibility="public" type="_4h375gmJEe-zU_mOK6wlpg" isOrdered="true" aggregation="composite" association="_4h375AmJEe-zU_mOK6wlpg">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h373wmJEe-zU_mOK6wlpg">
           <body>Ordered list defining the number and order of the resulting axis set.  Each entry provides the source (input) dimension for that output dimension.</body>
         </ownedComment>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bAX3ugmHEe-zU_mOK6wlpg" value="*"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX3uwmHEe-zU_mOK6wlpg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4h374AmJEe-zU_mOK6wlpg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h374QmJEe-zU_mOK6wlpg"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX3vAmHEe-zU_mOK6wlpg" name="numSourceAxes" visibility="public" type="_bAX4dQmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3vQmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h374gmJEe-zU_mOK6wlpg" name="numSourceAxes" visibility="public" type="_4h38mwmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h374wmJEe-zU_mOK6wlpg">
           <body>The number of input axes. Used to verify dimensional coverage in forward and inverse directions. For example, numSourceAxes=4 with axismap=[1,3] indicates that axes [2,4] have been dropped.
 </body>
         </ownedComment>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_bAX3vgmHEe-zU_mOK6wlpg" memberEnd="_bAX3uAmHEe-zU_mOK6wlpg _bAX3vwmHEe-zU_mOK6wlpg">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_bAX3vwmHEe-zU_mOK6wlpg" visibility="public" type="_bAX3tQmHEe-zU_mOK6wlpg" association="_bAX3vgmHEe-zU_mOK6wlpg"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_4h375AmJEe-zU_mOK6wlpg" memberEnd="_4h373gmJEe-zU_mOK6wlpg _4h375QmJEe-zU_mOK6wlpg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_4h375QmJEe-zU_mOK6wlpg" visibility="public" type="_4h372wmJEe-zU_mOK6wlpg" association="_4h375AmJEe-zU_mOK6wlpg"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX3wAmHEe-zU_mOK6wlpg" name="PermuteAxis">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3wQmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h375gmJEe-zU_mOK6wlpg" name="PermuteAxis">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h375wmJEe-zU_mOK6wlpg">
         <body>Entry for the Permute operation, this object defines the mapping of input dimension to output dimension.  The output dimension is determined from its order in the axismap list.</body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX3wgmHEe-zU_mOK6wlpg" name="sourceAxis" visibility="public" type="_bAX4dQmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3wwmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h376AmJEe-zU_mOK6wlpg" name="sourceAxis" visibility="public" type="_4h38mwmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h376QmJEe-zU_mOK6wlpg">
           <body>Source (input) dimension number, 1 based.</body>
         </ownedComment>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX3xAmHEe-zU_mOK6wlpg" name="seedValue" visibility="public" type="_bAX4cAmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3xQmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h376gmJEe-zU_mOK6wlpg" name="seedValue" visibility="public" type="_4h38lgmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h376wmJEe-zU_mOK6wlpg">
           <body>Value to assign for the new dimensional axis.</body>
         </ownedComment>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX3xgmHEe-zU_mOK6wlpg"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h377AmJEe-zU_mOK6wlpg"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX3xwmHEe-zU_mOK6wlpg" name="Identity">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3yAmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h377QmJEe-zU_mOK6wlpg" name="Identity">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h377gmJEe-zU_mOK6wlpg">
         <body>A 1-Dimensional operation which makes no change to the inputs. ( X' = X )
 </body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX3yQmHEe-zU_mOK6wlpg" general="_bAX3YgmHEe-zU_mOK6wlpg"/>
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h377wmJEe-zU_mOK6wlpg" general="_4h37iAmJEe-zU_mOK6wlpg"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX3ygmHEe-zU_mOK6wlpg" name="Shift">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3ywmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h378AmJEe-zU_mOK6wlpg" name="Shift">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h378QmJEe-zU_mOK6wlpg">
         <body>A 1-Dimensional operation defining a simple offset. ( X' = X + offset )
 </body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX3zAmHEe-zU_mOK6wlpg" general="_bAX3YgmHEe-zU_mOK6wlpg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX3zQmHEe-zU_mOK6wlpg" name="offset" visibility="public" type="_bAX4cAmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3zgmHEe-zU_mOK6wlpg">
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h378gmJEe-zU_mOK6wlpg" general="_4h37iAmJEe-zU_mOK6wlpg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h378wmJEe-zU_mOK6wlpg" name="offset" visibility="public" type="_4h38lgmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h379AmJEe-zU_mOK6wlpg">
           <body>The amount of offset to apply.
 </body>
         </ownedComment>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX3zwmHEe-zU_mOK6wlpg" name="Scale">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX30AmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h379QmJEe-zU_mOK6wlpg" name="Scale">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h379gmJEe-zU_mOK6wlpg">
         <body>A 1-Dimensional operator for simple scaling. ( X' = factor*X )
 </body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX30QmHEe-zU_mOK6wlpg" general="_bAX3YgmHEe-zU_mOK6wlpg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX30gmHEe-zU_mOK6wlpg" name="factor" visibility="public" type="_bAX4cAmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX30wmHEe-zU_mOK6wlpg">
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h379wmJEe-zU_mOK6wlpg" general="_4h37iAmJEe-zU_mOK6wlpg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h37-AmJEe-zU_mOK6wlpg" name="factor" visibility="public" type="_4h38lgmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37-QmJEe-zU_mOK6wlpg">
           <body>The scale factor.
 </body>
         </ownedComment>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX31AmHEe-zU_mOK6wlpg" name="Rotate2D">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX31QmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h37-gmJEe-zU_mOK6wlpg" name="Rotate2D">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h37-wmJEe-zU_mOK6wlpg">
         <body>A 2-Dimensional rotation operation.
 </body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX31gmHEe-zU_mOK6wlpg" general="_bAX3YgmHEe-zU_mOK6wlpg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX31wmHEe-zU_mOK6wlpg" name="angle" visibility="public" type="_bAX4cAmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX32AmHEe-zU_mOK6wlpg">
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h37_AmJEe-zU_mOK6wlpg" general="_4h37iAmJEe-zU_mOK6wlpg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h37_QmJEe-zU_mOK6wlpg" name="angle" visibility="public" type="_4h38lgmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h37_gmJEe-zU_mOK6wlpg">
           <body>Rotation angle, in degrees, from the positive direction of axis 1 toward the positive direction of axis 2.
 </body>
         </ownedComment>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX32QmHEe-zU_mOK6wlpg" name="EulerRotation">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX32gmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h37_wmJEe-zU_mOK6wlpg" name="EulerRotation">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h38AAmJEe-zU_mOK6wlpg">
         <body>Defines a rotation operation in a 3-dimensional cartesian coordinate space, defined as a series of rotations about the native axes (x,y,z).
 </body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX32wmHEe-zU_mOK6wlpg" general="_bAX3YgmHEe-zU_mOK6wlpg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX33AmHEe-zU_mOK6wlpg" name="eulerAngle" visibility="public" type="_bAX34QmHEe-zU_mOK6wlpg" aggregation="composite" association="_bAX33wmHEe-zU_mOK6wlpg">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX33QmHEe-zU_mOK6wlpg">
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h38AQmJEe-zU_mOK6wlpg" general="_4h37iAmJEe-zU_mOK6wlpg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38AgmJEe-zU_mOK6wlpg" name="eulerAngle" visibility="public" type="_4h38BwmJEe-zU_mOK6wlpg" aggregation="composite" association="_4h38BQmJEe-zU_mOK6wlpg">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38AwmJEe-zU_mOK6wlpg">
           <body>Rotation angle about a specified axis.
 </body>
         </ownedComment>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bAX33gmHEe-zU_mOK6wlpg" value="*"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4h38BAmJEe-zU_mOK6wlpg" value="*"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_bAX33wmHEe-zU_mOK6wlpg" memberEnd="_bAX33AmHEe-zU_mOK6wlpg _bAX34AmHEe-zU_mOK6wlpg">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_bAX34AmHEe-zU_mOK6wlpg" visibility="public" type="_bAX32QmHEe-zU_mOK6wlpg" association="_bAX33wmHEe-zU_mOK6wlpg"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_4h38BQmJEe-zU_mOK6wlpg" memberEnd="_4h38AgmJEe-zU_mOK6wlpg _4h38BgmJEe-zU_mOK6wlpg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_4h38BgmJEe-zU_mOK6wlpg" visibility="public" type="_4h37_wmJEe-zU_mOK6wlpg" association="_4h38BQmJEe-zU_mOK6wlpg"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX34QmHEe-zU_mOK6wlpg" name="EulerAngle">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX34gmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h38BwmJEe-zU_mOK6wlpg" name="EulerAngle">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h38CAmJEe-zU_mOK6wlpg">
         <body>Angular rotation about a particular axis of a 3-dimensional cartesian coordinate space.
 </body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX34wmHEe-zU_mOK6wlpg" name="rotationAxis" visibility="public" type="_bAX4dAmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX35AmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38CQmJEe-zU_mOK6wlpg" name="rotationAxis" visibility="public" type="_4h38mgmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38CgmJEe-zU_mOK6wlpg">
           <body>Identifies the axis of rotation. MUST be 'x', 'y', or 'z'
 </body>
         </ownedComment>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX35QmHEe-zU_mOK6wlpg" name="angle" visibility="public" type="_bAX4cAmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX35gmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38CwmJEe-zU_mOK6wlpg" name="angle" visibility="public" type="_4h38lgmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38DAmJEe-zU_mOK6wlpg">
           <body>Angle of rotation, in degrees. Angle sign follows the right-hand rule, where positive values indicate clockwise rotation (looking in +axis direction), negative values for counter-clockwise.
 </body>
         </ownedComment>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX35wmHEe-zU_mOK6wlpg" name="Matrix">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX36AmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h38DQmJEe-zU_mOK6wlpg" name="Matrix">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h38DgmJEe-zU_mOK6wlpg">
         <body>A matrix operation. Each cell of the matrix is provided by a MatrixElement object. Missing elements should be considered to equal 0.
 </body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX36QmHEe-zU_mOK6wlpg" general="_bAX3YgmHEe-zU_mOK6wlpg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX36gmHEe-zU_mOK6wlpg" name="element" visibility="public" type="_bAX39AmHEe-zU_mOK6wlpg" aggregation="composite" association="_bAX38gmHEe-zU_mOK6wlpg">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX36wmHEe-zU_mOK6wlpg">
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h38DwmJEe-zU_mOK6wlpg" general="_4h37iAmJEe-zU_mOK6wlpg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38EAmJEe-zU_mOK6wlpg" name="element" visibility="public" type="_4h38GgmJEe-zU_mOK6wlpg" aggregation="composite" association="_4h38GAmJEe-zU_mOK6wlpg">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38EQmJEe-zU_mOK6wlpg">
           <body>Collection of MatrixElements which define each cell of the matrix. The total number of elements MUST NOT exceed nrows*ncolumns, any missing elements result in a cell with value=0.0.
 </body>
         </ownedComment>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bAX37AmHEe-zU_mOK6wlpg" value="*"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX37QmHEe-zU_mOK6wlpg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4h38EgmJEe-zU_mOK6wlpg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h38EwmJEe-zU_mOK6wlpg"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX37gmHEe-zU_mOK6wlpg" name="nrows" visibility="public" type="_bAX4dQmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX37wmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38FAmJEe-zU_mOK6wlpg" name="nrows" visibility="public" type="_4h38mwmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38FQmJEe-zU_mOK6wlpg">
           <body>Number of rows in the matrix.
 </body>
         </ownedComment>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX38AmHEe-zU_mOK6wlpg" name="ncolumns" visibility="public" type="_bAX4dQmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX38QmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38FgmJEe-zU_mOK6wlpg" name="ncolumns" visibility="public" type="_4h38mwmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38FwmJEe-zU_mOK6wlpg">
           <body>Number of columns in the matrix.
 </body>
         </ownedComment>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_bAX38gmHEe-zU_mOK6wlpg" memberEnd="_bAX36gmHEe-zU_mOK6wlpg _bAX38wmHEe-zU_mOK6wlpg">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_bAX38wmHEe-zU_mOK6wlpg" visibility="public" type="_bAX35wmHEe-zU_mOK6wlpg" association="_bAX38gmHEe-zU_mOK6wlpg"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_4h38GAmJEe-zU_mOK6wlpg" memberEnd="_4h38EAmJEe-zU_mOK6wlpg _4h38GQmJEe-zU_mOK6wlpg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_4h38GQmJEe-zU_mOK6wlpg" visibility="public" type="_4h38DQmJEe-zU_mOK6wlpg" association="_4h38GAmJEe-zU_mOK6wlpg"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX39AmHEe-zU_mOK6wlpg" name="MatrixElement">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX39QmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h38GgmJEe-zU_mOK6wlpg" name="MatrixElement">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h38GwmJEe-zU_mOK6wlpg">
         <body>The value of cell (row,column) in a 2-dimensional matrix.
 </body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX39gmHEe-zU_mOK6wlpg" name="row" visibility="public" type="_bAX4dQmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX39wmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38HAmJEe-zU_mOK6wlpg" name="row" visibility="public" type="_4h38mwmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38HQmJEe-zU_mOK6wlpg">
           <body>Matrix cell row number.
 </body>
         </ownedComment>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX3-AmHEe-zU_mOK6wlpg" name="column" visibility="public" type="_bAX4dQmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3-QmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38HgmJEe-zU_mOK6wlpg" name="column" visibility="public" type="_4h38mwmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38HwmJEe-zU_mOK6wlpg">
           <body>Matrix cell column number.
 </body>
         </ownedComment>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX3-gmHEe-zU_mOK6wlpg" name="value" visibility="public" type="_bAX4cAmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3-wmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38IAmJEe-zU_mOK6wlpg" name="value" visibility="public" type="_4h38lgmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38IQmJEe-zU_mOK6wlpg">
           <body>Matrix cell value.
 </body>
         </ownedComment>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX3_AmHEe-zU_mOK6wlpg" name="Projection" isAbstract="true">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX3_QmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h38IgmJEe-zU_mOK6wlpg" name="Projection" isAbstract="true">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h38IwmJEe-zU_mOK6wlpg">
         <body>Abstract head of World Coordinate System (WCS) projection operations. We do not attempt to define the operations here, but instead, provide extensions which support the transforms described in the FITS WCS papers II and III.
 </body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX3_gmHEe-zU_mOK6wlpg" general="_bAX3YgmHEe-zU_mOK6wlpg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX3_wmHEe-zU_mOK6wlpg" name="param" visibility="public" type="_bAX4BQmHEe-zU_mOK6wlpg" aggregation="composite" association="_bAX4AwmHEe-zU_mOK6wlpg">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4AAmHEe-zU_mOK6wlpg">
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h38JAmJEe-zU_mOK6wlpg" general="_4h37iAmJEe-zU_mOK6wlpg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38JQmJEe-zU_mOK6wlpg" name="param" visibility="public" type="_4h38KwmJEe-zU_mOK6wlpg" aggregation="composite" association="_4h38KQmJEe-zU_mOK6wlpg">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38JgmJEe-zU_mOK6wlpg">
           <body>Set of 0 or more parameters providing supplemental metadata required to execute a particular projection algorithm. The number and meaning of the parameters depends on the algorithm. They are typically in the from of keyword/value pairs, so we provide a simple ProjectionParam element to accommodate these. The detailed content description is left to the WCS paper.
 </body>
         </ownedComment>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bAX4AQmHEe-zU_mOK6wlpg" value="*"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX4AgmHEe-zU_mOK6wlpg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4h38JwmJEe-zU_mOK6wlpg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h38KAmJEe-zU_mOK6wlpg"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_bAX4AwmHEe-zU_mOK6wlpg" memberEnd="_bAX3_wmHEe-zU_mOK6wlpg _bAX4BAmHEe-zU_mOK6wlpg">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_bAX4BAmHEe-zU_mOK6wlpg" visibility="public" type="_bAX3_AmHEe-zU_mOK6wlpg" association="_bAX4AwmHEe-zU_mOK6wlpg"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_4h38KQmJEe-zU_mOK6wlpg" memberEnd="_4h38JQmJEe-zU_mOK6wlpg _4h38KgmJEe-zU_mOK6wlpg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_4h38KgmJEe-zU_mOK6wlpg" visibility="public" type="_4h38IgmJEe-zU_mOK6wlpg" association="_4h38KQmJEe-zU_mOK6wlpg"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX4BQmHEe-zU_mOK6wlpg" name="ProjectionParam">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4BgmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h38KwmJEe-zU_mOK6wlpg" name="ProjectionParam">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h38LAmJEe-zU_mOK6wlpg">
         <body>Simple parameter specification for WCS Projections. The parameter is modeled as a simple name/value pair. The details of expectations for the various projection algorithms is left to the WCS paper describing the algorithm.
 </body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4BwmHEe-zU_mOK6wlpg" name="name" visibility="public" type="_bAX4dAmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4CAmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38LQmJEe-zU_mOK6wlpg" name="name" visibility="public" type="_4h38mgmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38LgmJEe-zU_mOK6wlpg">
           <body>The parameter name as described in the WCS papers for each operation type.
 </body>
         </ownedComment>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4CQmHEe-zU_mOK6wlpg" name="value" visibility="public" type="_bAX4cAmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4CgmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38LwmJEe-zU_mOK6wlpg" name="value" visibility="public" type="_4h38lgmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38MAmJEe-zU_mOK6wlpg">
           <body>The value for the parameter.
 </body>
         </ownedComment>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX4CwmHEe-zU_mOK6wlpg" name="SkyProjection">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4DAmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h38MQmJEe-zU_mOK6wlpg" name="SkyProjection">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h38MgmJEe-zU_mOK6wlpg">
         <body>This class corresponds to the Spherical Projection component of the FITS WCS paper II. As in the paper, this operation describes the mapping from the intermediate &amp;quot;Projection Plane&amp;quot; to the &amp;quot;Native Spherical&amp;quot; coordinate system. This model supports all defined projection types, where the appropriate code is specified in the algorithm attribute. All projection parameters are to be provided through the ProjectionParam list according to the descriptions given in the FITS WCS paper.
 </body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX4DQmHEe-zU_mOK6wlpg" general="_bAX3_AmHEe-zU_mOK6wlpg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4DgmHEe-zU_mOK6wlpg" name="algorithm" visibility="public" type="_bAX3fwmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4DwmHEe-zU_mOK6wlpg">
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h38MwmJEe-zU_mOK6wlpg" general="_4h38IgmJEe-zU_mOK6wlpg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38NAmJEe-zU_mOK6wlpg" name="algorithm" visibility="public" type="_4h37pQmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38NQmJEe-zU_mOK6wlpg">
           <body>The projection algorithm to apply. The value MUST be taken from the enumeration of standard sky projection algorithms. Extracted from &amp;#39;ctype&amp;#39; in the FITS WCS representations.
 </body>
         </ownedComment>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX4EAmHEe-zU_mOK6wlpg" name="SkyProjRotate">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4EQmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h38NgmJEe-zU_mOK6wlpg" name="SkyProjRotate">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h38NwmJEe-zU_mOK6wlpg">
         <body>This class extends SkyProjection to include the Spherical Rotation component of the FITS WCS paper II. This operation describes the mapping from the "Native Spherical" coordinate system to the "Celestial" coordinate system. The reference values are provided at the appropriate attribute, while all other parameters (e.g. LONPOLE, LATPOLE) are to be provided through the ProjectionParam list according to the descriptions given in the FITS WCS paper.
 </body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX4EgmHEe-zU_mOK6wlpg" general="_bAX4CwmHEe-zU_mOK6wlpg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4EwmHEe-zU_mOK6wlpg" name="referenceValue" visibility="public" type="_bAX4cAmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4FAmHEe-zU_mOK6wlpg">
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h38OAmJEe-zU_mOK6wlpg" general="_4h38MQmJEe-zU_mOK6wlpg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38OQmJEe-zU_mOK6wlpg" name="referenceValue" visibility="public" type="_4h38lgmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38OgmJEe-zU_mOK6wlpg">
           <body>The target reference values in each dimension. Equivalent to 'crval' in FITS WCS representations.
 </body>
         </ownedComment>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bAX4FQmHEe-zU_mOK6wlpg" value="2"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX4FgmHEe-zU_mOK6wlpg" value="2"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4h38OwmJEe-zU_mOK6wlpg" value="2"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h38PAmJEe-zU_mOK6wlpg" value="2"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX4FwmHEe-zU_mOK6wlpg" name="SpectralProjection">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4GAmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h38PQmJEe-zU_mOK6wlpg" name="SpectralProjection">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h38PgmJEe-zU_mOK6wlpg">
         <body>This class represents a nonlinear one-dimensional spectral transform as detailed in the FITS WCS paper III.
 </body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX4GQmHEe-zU_mOK6wlpg" general="_bAX3_AmHEe-zU_mOK6wlpg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4GgmHEe-zU_mOK6wlpg" name="referenceValue" visibility="public" type="_bAX4cAmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4GwmHEe-zU_mOK6wlpg">
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h38PwmJEe-zU_mOK6wlpg" general="_4h38IgmJEe-zU_mOK6wlpg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38QAmJEe-zU_mOK6wlpg" name="referenceValue" visibility="public" type="_4h38lgmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38QQmJEe-zU_mOK6wlpg">
           <body>The target reference value for the axis. Equivalent to 'crval' in FITS WCS representations.</body>
         </ownedComment>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4HAmHEe-zU_mOK6wlpg" name="algorithm" visibility="public" type="_bAX4hgmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4HQmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38QgmJEe-zU_mOK6wlpg" name="algorithm" visibility="public" type="_4h38rAmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38QwmJEe-zU_mOK6wlpg">
           <body>The projection algorithm to apply. The value MUST be taken from the enumeration of non-linear spectral projection algorithms. Extracted from 'ctype' in FITS WCS representations.
 </body>
         </ownedComment>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4HgmHEe-zU_mOK6wlpg" name="coordType" visibility="public" type="_bAX4pgmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4HwmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38RAmJEe-zU_mOK6wlpg" name="coordType" visibility="public" type="_4h38zAmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38RQmJEe-zU_mOK6wlpg">
           <body>The resulting spectral coordinate type code. Values MUST be taken from the enumerated list of spectral coordinate types. Extracted from 'ctype' in FITS WCS representations.
 </body>
         </ownedComment>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX4IAmHEe-zU_mOK6wlpg" name="Polynomial" isAbstract="true">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4IQmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h38RgmJEe-zU_mOK6wlpg" name="Polynomial" isAbstract="true">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h38RwmJEe-zU_mOK6wlpg">
         <body>Abstract head of a family of Polynomial distortion operations.</body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX4IgmHEe-zU_mOK6wlpg" general="_bAX3YgmHEe-zU_mOK6wlpg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4IwmHEe-zU_mOK6wlpg" name="order" visibility="public" type="_bAX4dQmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4JAmHEe-zU_mOK6wlpg">
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h38SAmJEe-zU_mOK6wlpg" general="_4h37iAmJEe-zU_mOK6wlpg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38SQmJEe-zU_mOK6wlpg" name="order" visibility="public" type="_4h38mwmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38SgmJEe-zU_mOK6wlpg">
           <body>The order, or degree, of the polynomial expression.
 </body>
         </ownedComment>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX4JQmHEe-zU_mOK6wlpg" name="Polynomial1D">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4JgmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h38SwmJEe-zU_mOK6wlpg" name="Polynomial1D">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h38TAmJEe-zU_mOK6wlpg">
         <body>A 1-Dimensional Polynomial transform represented by the expression: X' = SUM( Ci*X**i), i=0..order. Each term is provided by a PolyCoeff1D object. Missing terms are considered to have a coefficient of 0.0.</body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX4JwmHEe-zU_mOK6wlpg" general="_bAX4IAmHEe-zU_mOK6wlpg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4KAmHEe-zU_mOK6wlpg" name="term" visibility="public" type="_bAX4LQmHEe-zU_mOK6wlpg" aggregation="composite" association="_bAX4KwmHEe-zU_mOK6wlpg">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4KQmHEe-zU_mOK6wlpg">
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h38TQmJEe-zU_mOK6wlpg" general="_4h38RgmJEe-zU_mOK6wlpg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38TgmJEe-zU_mOK6wlpg" name="term" visibility="public" type="_4h38UwmJEe-zU_mOK6wlpg" aggregation="composite" association="_4h38UQmJEe-zU_mOK6wlpg">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38TwmJEe-zU_mOK6wlpg">
           <body>A term in the polynomial expression.
 </body>
         </ownedComment>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bAX4KgmHEe-zU_mOK6wlpg" value="*"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4h38UAmJEe-zU_mOK6wlpg" value="*"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_bAX4KwmHEe-zU_mOK6wlpg" memberEnd="_bAX4KAmHEe-zU_mOK6wlpg _bAX4LAmHEe-zU_mOK6wlpg">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_bAX4LAmHEe-zU_mOK6wlpg" visibility="public" type="_bAX4JQmHEe-zU_mOK6wlpg" association="_bAX4KwmHEe-zU_mOK6wlpg"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_4h38UQmJEe-zU_mOK6wlpg" memberEnd="_4h38TgmJEe-zU_mOK6wlpg _4h38UgmJEe-zU_mOK6wlpg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_4h38UgmJEe-zU_mOK6wlpg" visibility="public" type="_4h38SwmJEe-zU_mOK6wlpg" association="_4h38UQmJEe-zU_mOK6wlpg"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX4LQmHEe-zU_mOK6wlpg" name="PolyCoeff1D">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4LgmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h38UwmJEe-zU_mOK6wlpg" name="PolyCoeff1D">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h38VAmJEe-zU_mOK6wlpg">
         <body>A term of the polynomial expression. This object provides the coefficient (c) and power (p) of the term, forming the expression c*X**p.
 </body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4LwmHEe-zU_mOK6wlpg" name="coeff" visibility="public" type="_bAX4cAmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4MAmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38VQmJEe-zU_mOK6wlpg" name="coeff" visibility="public" type="_4h38lgmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38VgmJEe-zU_mOK6wlpg">
           <body>Multiplicitive coefficient of the term.
 </body>
         </ownedComment>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4MQmHEe-zU_mOK6wlpg" name="power" visibility="public" type="_bAX4dQmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4MgmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38VwmJEe-zU_mOK6wlpg" name="power" visibility="public" type="_4h38mwmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38WAmJEe-zU_mOK6wlpg">
           <body>The power to raise the value for this term.
 </body>
         </ownedComment>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX4MwmHEe-zU_mOK6wlpg" name="Polynomial2D">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4NAmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h38WQmJEe-zU_mOK6wlpg" name="Polynomial2D">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h38WgmJEe-zU_mOK6wlpg">
         <body>A 2-Dimensional Polynomial transform represented by the expression: X' = SUMi,j( Cij*X**i*Y**j), i+j&lt;=order. Each term is provided by a PolyCoeff2D object. Missing terms are considered to have a coefficient of 0.0.
 </body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX4NQmHEe-zU_mOK6wlpg" general="_bAX4IAmHEe-zU_mOK6wlpg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4NgmHEe-zU_mOK6wlpg" name="term" visibility="public" type="_bAX4OwmHEe-zU_mOK6wlpg" aggregation="composite" association="_bAX4OQmHEe-zU_mOK6wlpg">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4NwmHEe-zU_mOK6wlpg">
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h38WwmJEe-zU_mOK6wlpg" general="_4h38RgmJEe-zU_mOK6wlpg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38XAmJEe-zU_mOK6wlpg" name="term" visibility="public" type="_4h38YQmJEe-zU_mOK6wlpg" aggregation="composite" association="_4h38XwmJEe-zU_mOK6wlpg">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38XQmJEe-zU_mOK6wlpg">
           <body>A term in the polynomial expression.</body>
         </ownedComment>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bAX4OAmHEe-zU_mOK6wlpg" value="*"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4h38XgmJEe-zU_mOK6wlpg" value="*"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_bAX4OQmHEe-zU_mOK6wlpg" memberEnd="_bAX4NgmHEe-zU_mOK6wlpg _bAX4OgmHEe-zU_mOK6wlpg">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_bAX4OgmHEe-zU_mOK6wlpg" visibility="public" type="_bAX4MwmHEe-zU_mOK6wlpg" association="_bAX4OQmHEe-zU_mOK6wlpg"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_4h38XwmJEe-zU_mOK6wlpg" memberEnd="_4h38XAmJEe-zU_mOK6wlpg _4h38YAmJEe-zU_mOK6wlpg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_4h38YAmJEe-zU_mOK6wlpg" visibility="public" type="_4h38WQmJEe-zU_mOK6wlpg" association="_4h38XwmJEe-zU_mOK6wlpg"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX4OwmHEe-zU_mOK6wlpg" name="PolyCoeff2D">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4PAmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h38YQmJEe-zU_mOK6wlpg" name="PolyCoeff2D">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h38YgmJEe-zU_mOK6wlpg">
         <body>A term of the polynomial expression. This object provides the coefficient (c) and power (p) of the term, forming the expression c*X**p[0]*Y**p[1].</body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4PQmHEe-zU_mOK6wlpg" name="coeff" visibility="public" type="_bAX4cAmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4PgmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38YwmJEe-zU_mOK6wlpg" name="coeff" visibility="public" type="_4h38lgmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38ZAmJEe-zU_mOK6wlpg">
           <body>Multiplicitive coefficient of the term.
 </body>
         </ownedComment>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4PwmHEe-zU_mOK6wlpg" name="power" visibility="public" type="_bAX4dQmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4QAmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38ZQmJEe-zU_mOK6wlpg" name="power" visibility="public" type="_4h38mwmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38ZgmJEe-zU_mOK6wlpg">
           <body>The power to raise the values for this term in each dimension.
 </body>
         </ownedComment>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bAX4QQmHEe-zU_mOK6wlpg" value="2"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX4QgmHEe-zU_mOK6wlpg" value="2"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4h38ZwmJEe-zU_mOK6wlpg" value="2"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h38aAmJEe-zU_mOK6wlpg" value="2"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX4QwmHEe-zU_mOK6wlpg" name="Lookup">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4RAmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h38aQmJEe-zU_mOK6wlpg" name="Lookup">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h38agmJEe-zU_mOK6wlpg">
         <body>Defines a lookup table operation. The Lookup is comprised of a series of value pairs (LookupEntry) which link specific points in the native system to corresponding points in the target system.  The 'interpolation' flag tells the user how to interpret data which falls between entries in the lookup table.  
 All members of the series MUST be of the same type.  Lookup tables with StringEntry type content MUST have interpolation="None".  Handling Enumerated data: A common usage of a Lookup operation is to map image pixel index to an enumeration, such as a Polarization state. This can be handled by two means: 1) Define a numeric equivalent for each enumeration literal, and use NumericEntry types. Casting to the corresponding literal occurs outside of the operation. 2) Your local model can define a LookupEntry extension which maps the native value directly the target EnumerationLiteral. The details of either approach for particular enumerations is considered outside the scope of this document.
 </body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX4RQmHEe-zU_mOK6wlpg" general="_bAX3YgmHEe-zU_mOK6wlpg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4RgmHEe-zU_mOK6wlpg" name="entry" visibility="public" type="_bAX4UQmHEe-zU_mOK6wlpg" isOrdered="true" aggregation="composite" association="_bAX4TwmHEe-zU_mOK6wlpg">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4RwmHEe-zU_mOK6wlpg">
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h38awmJEe-zU_mOK6wlpg" general="_4h37iAmJEe-zU_mOK6wlpg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38bAmJEe-zU_mOK6wlpg" name="entry" visibility="public" type="_4h38dwmJEe-zU_mOK6wlpg" isOrdered="true" aggregation="composite" association="_4h38dQmJEe-zU_mOK6wlpg">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38bQmJEe-zU_mOK6wlpg">
           <body>Set of lookup table entries forming a discrete mapping from the native space to the target space.</body>
         </ownedComment>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bAX4SAmHEe-zU_mOK6wlpg" value="*"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4h38bgmJEe-zU_mOK6wlpg" value="*"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4SQmHEe-zU_mOK6wlpg" name="interpolation" visibility="public" type="_bAX3dQmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4SgmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38bwmJEe-zU_mOK6wlpg" name="interpolation" visibility="public" type="_4h37mwmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38cAmJEe-zU_mOK6wlpg">
           <body>Specifies the form of interpolation, if any, prescribed to be performed.
 </body>
         </ownedComment>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX4SwmHEe-zU_mOK6wlpg"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h38cQmJEe-zU_mOK6wlpg"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4TAmHEe-zU_mOK6wlpg" name="bounds_error" visibility="public" type="_bAX4dgmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4TQmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38cgmJEe-zU_mOK6wlpg" name="bounds_error" visibility="public" type="_4h38nAmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38cwmJEe-zU_mOK6wlpg">
           <body>Flag to specify behaviour outside the lookup table data bounds. True indicates an error condition, False indicates that the associated "fill" entry should be returned. If no "fill" entry is provided, the value should be extrapolated.
 </body>
         </ownedComment>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX4TgmHEe-zU_mOK6wlpg"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h38dAmJEe-zU_mOK6wlpg"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_bAX4TwmHEe-zU_mOK6wlpg" memberEnd="_bAX4RgmHEe-zU_mOK6wlpg _bAX4UAmHEe-zU_mOK6wlpg">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_bAX4UAmHEe-zU_mOK6wlpg" visibility="public" type="_bAX4QwmHEe-zU_mOK6wlpg" association="_bAX4TwmHEe-zU_mOK6wlpg"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_4h38dQmJEe-zU_mOK6wlpg" memberEnd="_4h38bAmJEe-zU_mOK6wlpg _4h38dgmJEe-zU_mOK6wlpg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_4h38dgmJEe-zU_mOK6wlpg" visibility="public" type="_4h38aQmJEe-zU_mOK6wlpg" association="_4h38dQmJEe-zU_mOK6wlpg"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX4UQmHEe-zU_mOK6wlpg" name="LookupEntry" isAbstract="true">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4UgmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h38dwmJEe-zU_mOK6wlpg" name="LookupEntry" isAbstract="true">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h38eAmJEe-zU_mOK6wlpg">
         <body>This is an abstract head of lookup table entry objects. Each entry provides a discrete translation of a 'native' value to the corresponding 'target' value.
 </body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4UwmHEe-zU_mOK6wlpg" name="fill" visibility="public" type="_bAX4dgmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4VAmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38eQmJEe-zU_mOK6wlpg" name="fill" visibility="public" type="_4h38nAmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38egmJEe-zU_mOK6wlpg">
           <body>When TRUE, the entry provides values to be used outside the Lookup table data domain. MUST only appear first or last in the sequence. If missing, it is considered to be FALSE.
 </body>
         </ownedComment>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX4VQmHEe-zU_mOK6wlpg"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h38ewmJEe-zU_mOK6wlpg"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX4VgmHEe-zU_mOK6wlpg" name="NumericEntry">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4VwmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h38fAmJEe-zU_mOK6wlpg" name="NumericEntry">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h38fQmJEe-zU_mOK6wlpg">
         <body>A 1-Dimensional discrete mapping of numeric values.</body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX4WAmHEe-zU_mOK6wlpg" general="_bAX4UQmHEe-zU_mOK6wlpg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4WQmHEe-zU_mOK6wlpg" name="nativeValue" visibility="public" type="_bAX4cAmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4WgmHEe-zU_mOK6wlpg">
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h38fgmJEe-zU_mOK6wlpg" general="_4h38dwmJEe-zU_mOK6wlpg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38fwmJEe-zU_mOK6wlpg" name="nativeValue" visibility="public" type="_4h38lgmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38gAmJEe-zU_mOK6wlpg">
           <body>The native, or reference, value of the lookup entry.</body>
         </ownedComment>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4WwmHEe-zU_mOK6wlpg" name="targetValue" visibility="public" type="_bAX4cAmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4XAmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38gQmJEe-zU_mOK6wlpg" name="targetValue" visibility="public" type="_4h38lgmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38ggmJEe-zU_mOK6wlpg">
           <body>The target, or resulting, value of the lookup entry.
 </body>
         </ownedComment>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX4XQmHEe-zU_mOK6wlpg" name="NumericEntry2D">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4XgmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h38gwmJEe-zU_mOK6wlpg" name="NumericEntry2D">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h38hAmJEe-zU_mOK6wlpg">
         <body>A 2-Dimensional discrete mapping of numeric values.
 </body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX4XwmHEe-zU_mOK6wlpg" general="_bAX4UQmHEe-zU_mOK6wlpg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4YAmHEe-zU_mOK6wlpg" name="nativeValue" visibility="public" type="_bAX4cAmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4YQmHEe-zU_mOK6wlpg">
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h38hQmJEe-zU_mOK6wlpg" general="_4h38dwmJEe-zU_mOK6wlpg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38hgmJEe-zU_mOK6wlpg" name="nativeValue" visibility="public" type="_4h38lgmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38hwmJEe-zU_mOK6wlpg">
           <body>The native, or reference, value of the lookup entry.
 </body>
         </ownedComment>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bAX4YgmHEe-zU_mOK6wlpg" value="2"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX4YwmHEe-zU_mOK6wlpg" value="2"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4h38iAmJEe-zU_mOK6wlpg" value="2"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h38iQmJEe-zU_mOK6wlpg" value="2"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4ZAmHEe-zU_mOK6wlpg" name="targetValue" visibility="public" type="_bAX4cAmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4ZQmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38igmJEe-zU_mOK6wlpg" name="targetValue" visibility="public" type="_4h38lgmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38iwmJEe-zU_mOK6wlpg">
           <body>The target, or resulting, value of the lookup entry.
 </body>
         </ownedComment>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bAX4ZgmHEe-zU_mOK6wlpg" value="2"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX4ZwmHEe-zU_mOK6wlpg" value="2"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4h38jAmJEe-zU_mOK6wlpg" value="2"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h38jQmJEe-zU_mOK6wlpg" value="2"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX4aAmHEe-zU_mOK6wlpg" name="StringEntry">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4aQmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h38jgmJEe-zU_mOK6wlpg" name="StringEntry">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h38jwmJEe-zU_mOK6wlpg">
         <body>A 1-Dimensional discrete mapping of an integer counter to a corresponding string form. Since the result is non-numeric, a Lookup operation with StringEntry-s can only be used at the end of a Transform sequence.
 </body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX4agmHEe-zU_mOK6wlpg" general="_bAX4UQmHEe-zU_mOK6wlpg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4awmHEe-zU_mOK6wlpg" name="nativeValue" visibility="public" type="_bAX4dwmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4bAmHEe-zU_mOK6wlpg">
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h38kAmJEe-zU_mOK6wlpg" general="_4h38dwmJEe-zU_mOK6wlpg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38kQmJEe-zU_mOK6wlpg" name="nativeValue" visibility="public" type="_4h38nQmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38kgmJEe-zU_mOK6wlpg">
           <body>The native, or reference, value of the lookup entry.
 </body>
         </ownedComment>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4bQmHEe-zU_mOK6wlpg" name="targetValue" visibility="public" type="_bAX4dAmHEe-zU_mOK6wlpg" isUnique="false">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4bgmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38kwmJEe-zU_mOK6wlpg" name="targetValue" visibility="public" type="_4h38mgmJEe-zU_mOK6wlpg" isUnique="false">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38lAmJEe-zU_mOK6wlpg">
           <body>The target, or resulting, value of the lookup entry.</body>
         </ownedComment>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_bAX4bwmHEe-zU_mOK6wlpg" name="ivoa">
-      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bAX4cAmHEe-zU_mOK6wlpg" name="real"/>
-      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bAX4cQmHEe-zU_mOK6wlpg" name="datetime"/>
-      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bAX4cgmHEe-zU_mOK6wlpg" name="anyURI">
-        <generalization xmi:type="uml:Generalization" xmi:id="_bAX4cwmHEe-zU_mOK6wlpg" general="_bAX4dAmHEe-zU_mOK6wlpg"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_4h38lQmJEe-zU_mOK6wlpg" name="ivoa">
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4h38lgmJEe-zU_mOK6wlpg" name="real"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4h38lwmJEe-zU_mOK6wlpg" name="datetime"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4h38mAmJEe-zU_mOK6wlpg" name="anyURI">
+        <generalization xmi:type="uml:Generalization" xmi:id="_4h38mQmJEe-zU_mOK6wlpg" general="_4h38mgmJEe-zU_mOK6wlpg"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bAX4dAmHEe-zU_mOK6wlpg" name="string"/>
-      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bAX4dQmHEe-zU_mOK6wlpg" name="nonnegativeInteger"/>
-      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bAX4dgmHEe-zU_mOK6wlpg" name="boolean"/>
-      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bAX4dwmHEe-zU_mOK6wlpg" name="integer"/>
-      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bAX4eAmHEe-zU_mOK6wlpg" name="rational"/>
-      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bAX4eQmHEe-zU_mOK6wlpg" name="complex"/>
-      <packagedElement xmi:type="uml:InformationItem" xmi:id="_bAX4egmHEe-zU_mOK6wlpg" name="IVOA Base Types V1.0 "/>
-      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bAX4ewmHEe-zU_mOK6wlpg" name="Unit">
-        <generalization xmi:type="uml:Generalization" xmi:id="_bAX4fAmHEe-zU_mOK6wlpg" general="_bAX4dAmHEe-zU_mOK6wlpg"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4h38mgmJEe-zU_mOK6wlpg" name="string"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4h38mwmJEe-zU_mOK6wlpg" name="nonnegativeInteger"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4h38nAmJEe-zU_mOK6wlpg" name="boolean"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4h38nQmJEe-zU_mOK6wlpg" name="integer"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4h38ngmJEe-zU_mOK6wlpg" name="rational"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4h38nwmJEe-zU_mOK6wlpg" name="complex"/>
+      <packagedElement xmi:type="uml:InformationItem" xmi:id="_4h38oAmJEe-zU_mOK6wlpg" name="IVOA Base Types V1.0 "/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4h38oQmJEe-zU_mOK6wlpg" name="Unit">
+        <generalization xmi:type="uml:Generalization" xmi:id="_4h38ogmJEe-zU_mOK6wlpg" general="_4h38mgmJEe-zU_mOK6wlpg"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:DataType" xmi:id="_bAX4fQmHEe-zU_mOK6wlpg" name="Quantity" isAbstract="true">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4fgmHEe-zU_mOK6wlpg" name="unit" visibility="public" type="_bAX4ewmHEe-zU_mOK6wlpg" isUnique="false">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX4fwmHEe-zU_mOK6wlpg"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_4h38owmJEe-zU_mOK6wlpg" name="Quantity" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38pAmJEe-zU_mOK6wlpg" name="unit" visibility="public" type="_4h38oQmJEe-zU_mOK6wlpg" isUnique="false">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h38pQmJEe-zU_mOK6wlpg"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:DataType" xmi:id="_bAX4gAmHEe-zU_mOK6wlpg" name="IntegerQuantity">
-        <generalization xmi:type="uml:Generalization" xmi:id="_bAX4gQmHEe-zU_mOK6wlpg" general="_bAX4fQmHEe-zU_mOK6wlpg"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4ggmHEe-zU_mOK6wlpg" name="value" visibility="public" type="_bAX4dwmHEe-zU_mOK6wlpg" isUnique="false"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_4h38pgmJEe-zU_mOK6wlpg" name="IntegerQuantity">
+        <generalization xmi:type="uml:Generalization" xmi:id="_4h38pwmJEe-zU_mOK6wlpg" general="_4h38owmJEe-zU_mOK6wlpg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38qAmJEe-zU_mOK6wlpg" name="value" visibility="public" type="_4h38nQmJEe-zU_mOK6wlpg" isUnique="false"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:DataType" xmi:id="_bAX4gwmHEe-zU_mOK6wlpg" name="RealQuantity">
-        <generalization xmi:type="uml:Generalization" xmi:id="_bAX4hAmHEe-zU_mOK6wlpg" general="_bAX4fQmHEe-zU_mOK6wlpg"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4hQmHEe-zU_mOK6wlpg" name="value" visibility="public" type="_bAX4cAmHEe-zU_mOK6wlpg" isUnique="false"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_4h38qQmJEe-zU_mOK6wlpg" name="RealQuantity">
+        <generalization xmi:type="uml:Generalization" xmi:id="_4h38qgmJEe-zU_mOK6wlpg" general="_4h38owmJEe-zU_mOK6wlpg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4h38qwmJEe-zU_mOK6wlpg" name="value" visibility="public" type="_4h38lgmJEe-zU_mOK6wlpg" isUnique="false"/>
       </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Enumeration" xmi:id="_bAX4hgmHEe-zU_mOK6wlpg" name="SpectralProjectionType">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4hwmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_4h38rAmJEe-zU_mOK6wlpg" name="SpectralProjectionType">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h38rQmJEe-zU_mOK6wlpg">
         <body>Enumeration of non-linear spectral projection algorithm codes as listed in Table 2 of the FITS WCS paper III.
 NOTE: We exclude the TAB code from this list, that type is handled by the Lookup operation in this model.
 </body>
       </ownedComment>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4iAmHEe-zU_mOK6wlpg" name="F2W">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4iQmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h38rgmJEe-zU_mOK6wlpg" name="F2W">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38rwmJEe-zU_mOK6wlpg">
           <body>Frequency - Wavelength</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4igmHEe-zU_mOK6wlpg" name="F2V">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4iwmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h38sAmJEe-zU_mOK6wlpg" name="F2V">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38sQmJEe-zU_mOK6wlpg">
           <body>Frequency - Apparent radial velocity</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4jAmHEe-zU_mOK6wlpg" name="F2A">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4jQmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h38sgmJEe-zU_mOK6wlpg" name="F2A">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38swmJEe-zU_mOK6wlpg">
           <body>Frequency - Air wavelength</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4jgmHEe-zU_mOK6wlpg" name="W2F">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4jwmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h38tAmJEe-zU_mOK6wlpg" name="W2F">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38tQmJEe-zU_mOK6wlpg">
           <body>Wavelength - Frequency</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4kAmHEe-zU_mOK6wlpg" name="W2V">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4kQmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h38tgmJEe-zU_mOK6wlpg" name="W2V">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38twmJEe-zU_mOK6wlpg">
           <body>Wavelength - Apparent radial velocity</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4kgmHEe-zU_mOK6wlpg" name="W2A">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4kwmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h38uAmJEe-zU_mOK6wlpg" name="W2A">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38uQmJEe-zU_mOK6wlpg">
           <body>Wavelength - Air wavelength</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4lAmHEe-zU_mOK6wlpg" name="V2F">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4lQmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h38ugmJEe-zU_mOK6wlpg" name="V2F">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38uwmJEe-zU_mOK6wlpg">
           <body>Apparent radial velocity - Frequency</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4lgmHEe-zU_mOK6wlpg" name="V2W">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4lwmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h38vAmJEe-zU_mOK6wlpg" name="V2W">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38vQmJEe-zU_mOK6wlpg">
           <body>Apparent radial velocity - Wavelength</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4mAmHEe-zU_mOK6wlpg" name="V2A">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4mQmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h38vgmJEe-zU_mOK6wlpg" name="V2A">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38vwmJEe-zU_mOK6wlpg">
           <body>Apparent radial velocity - Air wavelength</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4mgmHEe-zU_mOK6wlpg" name="A2F">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4mwmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h38wAmJEe-zU_mOK6wlpg" name="A2F">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38wQmJEe-zU_mOK6wlpg">
           <body>Air wavelength - Frequency</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4nAmHEe-zU_mOK6wlpg" name="A2W">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4nQmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h38wgmJEe-zU_mOK6wlpg" name="A2W">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38wwmJEe-zU_mOK6wlpg">
           <body>Air wavelength - Wavelength</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4ngmHEe-zU_mOK6wlpg" name="A2V">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4nwmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h38xAmJEe-zU_mOK6wlpg" name="A2V">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38xQmJEe-zU_mOK6wlpg">
           <body>Air wavelength - Apparent radial velocity</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4oAmHEe-zU_mOK6wlpg" name="LOG">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4oQmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h38xgmJEe-zU_mOK6wlpg" name="LOG">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38xwmJEe-zU_mOK6wlpg">
           <body>Logarithm</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4ogmHEe-zU_mOK6wlpg" name="GRI">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4owmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h38yAmJEe-zU_mOK6wlpg" name="GRI">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38yQmJEe-zU_mOK6wlpg">
           <body>Grism</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4pAmHEe-zU_mOK6wlpg" name="GRA">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4pQmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h38ygmJEe-zU_mOK6wlpg" name="GRA">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38ywmJEe-zU_mOK6wlpg">
           <body>Grism in air</body>
         </ownedComment>
       </ownedLiteral>
     </packagedElement>
-    <packagedElement xmi:type="uml:Enumeration" xmi:id="_bAX4pgmHEe-zU_mOK6wlpg" name="SpectralCoordType">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4pwmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_4h38zAmJEe-zU_mOK6wlpg" name="SpectralCoordType">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h38zQmJEe-zU_mOK6wlpg">
         <body>Enumeration of spectral coordinate types as listed in Table 1 of the FITS WCS paper III.</body>
       </ownedComment>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4qAmHEe-zU_mOK6wlpg" name="FREQ">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4qQmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h38zgmJEe-zU_mOK6wlpg" name="FREQ">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h38zwmJEe-zU_mOK6wlpg">
           <body>Frequency</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4qgmHEe-zU_mOK6wlpg" name="ENER">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4qwmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h380AmJEe-zU_mOK6wlpg" name="ENER">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h380QmJEe-zU_mOK6wlpg">
           <body>Energy</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4rAmHEe-zU_mOK6wlpg" name="WAVN">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4rQmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h380gmJEe-zU_mOK6wlpg" name="WAVN">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h380wmJEe-zU_mOK6wlpg">
           <body>Wavenumber</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4rgmHEe-zU_mOK6wlpg" name="VRAD">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4rwmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h381AmJEe-zU_mOK6wlpg" name="VRAD">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h381QmJEe-zU_mOK6wlpg">
           <body>Radio velocity</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4sAmHEe-zU_mOK6wlpg" name="WAVE">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4sQmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h381gmJEe-zU_mOK6wlpg" name="WAVE">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h381wmJEe-zU_mOK6wlpg">
           <body>Vacuum wavelength</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4sgmHEe-zU_mOK6wlpg" name="VOPT">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4swmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h382AmJEe-zU_mOK6wlpg" name="VOPT">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h382QmJEe-zU_mOK6wlpg">
           <body>Optical velocity</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4tAmHEe-zU_mOK6wlpg" name="ZOPT">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4tQmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h382gmJEe-zU_mOK6wlpg" name="ZOPT">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h382wmJEe-zU_mOK6wlpg">
           <body>Redshift</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4tgmHEe-zU_mOK6wlpg" name="AWAV">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4twmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h383AmJEe-zU_mOK6wlpg" name="AWAV">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h383QmJEe-zU_mOK6wlpg">
           <body>Air wavelength</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4uAmHEe-zU_mOK6wlpg" name="VELO">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4uQmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h383gmJEe-zU_mOK6wlpg" name="VELO">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h383wmJEe-zU_mOK6wlpg">
           <body>Apparent radial velocity</body>
         </ownedComment>
       </ownedLiteral>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bAX4ugmHEe-zU_mOK6wlpg" name="BETA">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4uwmHEe-zU_mOK6wlpg">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4h384AmJEe-zU_mOK6wlpg" name="BETA">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h384QmJEe-zU_mOK6wlpg">
           <body>Beta factor (v/c)</body>
         </ownedComment>
       </ownedLiteral>
     </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_bAX4vAmHEe-zU_mOK6wlpg" name="coords">
-      <packagedElement xmi:type="uml:Class" xmi:id="_bAX4vQmHEe-zU_mOK6wlpg" name="CoordSys" isAbstract="true">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4vgmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Package" xmi:id="_4h384gmJEe-zU_mOK6wlpg" name="coords">
+      <packagedElement xmi:type="uml:Class" xmi:id="_4h384wmJEe-zU_mOK6wlpg" name="CoordSys" isAbstract="true">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h385AmJEe-zU_mOK6wlpg">
           <body>&lt;Enter note text here&gt;</body>
         </ownedComment>
       </packagedElement>
-      <packagedElement xmi:type="uml:InformationItem" xmi:id="_bAX4vwmHEe-zU_mOK6wlpg" name="Coordinates and Coordinate Systems V1.0"/>
-      <packagedElement xmi:type="uml:Association" xmi:id="_bAX4wAmHEe-zU_mOK6wlpg" memberEnd="_bAX4zwmHEe-zU_mOK6wlpg _bAX4wQmHEe-zU_mOK6wlpg">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_bAX4wQmHEe-zU_mOK6wlpg" visibility="public" type="_bAX4ygmHEe-zU_mOK6wlpg" association="_bAX4wAmHEe-zU_mOK6wlpg">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX4wgmHEe-zU_mOK6wlpg"/>
+      <packagedElement xmi:type="uml:InformationItem" xmi:id="_4h385QmJEe-zU_mOK6wlpg" name="Coordinates and Coordinate Systems V1.0"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_4h4ikAmJEe-zU_mOK6wlpg" memberEnd="_4h4inwmJEe-zU_mOK6wlpg _4h4ikQmJEe-zU_mOK6wlpg">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_4h4ikQmJEe-zU_mOK6wlpg" visibility="public" type="_4h4imgmJEe-zU_mOK6wlpg" association="_4h4ikAmJEe-zU_mOK6wlpg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h4ikgmJEe-zU_mOK6wlpg"/>
         </ownedEnd>
       </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX4wwmHEe-zU_mOK6wlpg" name="TransformSet">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4xAmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h4ikwmJEe-zU_mOK6wlpg" name="TransformSet">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h4ilAmJEe-zU_mOK6wlpg">
         <body>TransformSet supports the relation of coordinate systems via Mappings.  The design is such that it supports the relation of collections of related coordinates systems by the various mappings between them.  
 
 A single TransformSet can relate a tree of spatial coordinate systems, individual TransNodes can be used as the parent for multiple branches.  For example:
@@ -885,128 +885,128 @@ Each transition is encapsulated by a TransNode instance linking the parent coord
 A simple transform from system A to system B requires two TransNodes, one describing system A (with no Mapping), and another describing system B with the Mapping from A to B.
 </body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4xQmHEe-zU_mOK6wlpg" name="node" visibility="public" type="_bAX4ygmHEe-zU_mOK6wlpg" aggregation="composite" association="_bAX4yAmHEe-zU_mOK6wlpg">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4xgmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h4ilQmJEe-zU_mOK6wlpg" name="node" visibility="public" type="_4h4imgmJEe-zU_mOK6wlpg" aggregation="composite" association="_4h4imAmJEe-zU_mOK6wlpg">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h4ilgmJEe-zU_mOK6wlpg">
           <body>A node in the transform set, relating a parent and target coordinate system with the corresponding mapping specification.</body>
         </ownedComment>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bAX4xwmHEe-zU_mOK6wlpg" value="*"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4h4ilwmJEe-zU_mOK6wlpg" value="*"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_bAX4yAmHEe-zU_mOK6wlpg" memberEnd="_bAX4xQmHEe-zU_mOK6wlpg _bAX4yQmHEe-zU_mOK6wlpg">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_bAX4yQmHEe-zU_mOK6wlpg" visibility="public" type="_bAX4wwmHEe-zU_mOK6wlpg" association="_bAX4yAmHEe-zU_mOK6wlpg"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_4h4imAmJEe-zU_mOK6wlpg" memberEnd="_4h4ilQmJEe-zU_mOK6wlpg _4h4imQmJEe-zU_mOK6wlpg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_4h4imQmJEe-zU_mOK6wlpg" visibility="public" type="_4h4ikwmJEe-zU_mOK6wlpg" association="_4h4imAmJEe-zU_mOK6wlpg"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX4ygmHEe-zU_mOK6wlpg" name="TransNode">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4ywmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h4imgmJEe-zU_mOK6wlpg" name="TransNode">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h4imwmJEe-zU_mOK6wlpg">
         <body>TransNode is a container object relating a parent coordinate system and a target coordinate system (that of the node) with the mapping relation between them.  The associated Mapping MUST be constructed such that the mapping inputs correspond to the parent coordinate system and the mapping outputs to the target coordinate system.
 
 If either the parent node or mapping is NULL, the other MUST also be NULL.  This forms a 'root' node, containing only the target coordinate system, and serves as an origination node in the TransformSet.
 
 If the target is NULL, the parent and mapping MUST NOT be NULL, additionally such a node MUST NOT be the end point of a node sequence (ie: must be the 'parent' of another node).  This type of node can be useful for cases where the mapping defines the transform to an unspecified intermediate coordinate system, and enables a more efficient and compact structure for the TransformSet by forming a node at this intermediate coordinate system which can serve as the parent for multiple subsequent nodes.  </body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4zAmHEe-zU_mOK6wlpg" name="parent" visibility="public" type="_bAX4ygmHEe-zU_mOK6wlpg" association="_bAX41QmHEe-zU_mOK6wlpg">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX4zQmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h4inAmJEe-zU_mOK6wlpg" name="parent" visibility="public" type="_4h4imgmJEe-zU_mOK6wlpg" association="_4h4ipQmJEe-zU_mOK6wlpg">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h4inQmJEe-zU_mOK6wlpg">
           <body>This identifies the source coordinate system node.  The associated mapping describes the transformation from this parent system to the target system of this node.  Will be NULL for 'root' nodes.</body>
         </ownedComment>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX4zgmHEe-zU_mOK6wlpg"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h4ingmJEe-zU_mOK6wlpg"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX4zwmHEe-zU_mOK6wlpg" name="target" visibility="public" type="_bAX4vQmHEe-zU_mOK6wlpg" association="_bAX4wAmHEe-zU_mOK6wlpg">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX40AmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h4inwmJEe-zU_mOK6wlpg" name="target" visibility="public" type="_4h384wmJEe-zU_mOK6wlpg" association="_4h4ikAmJEe-zU_mOK6wlpg">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h4ioAmJEe-zU_mOK6wlpg">
           <body>This identifies the target coordinate system node.  It is the represenitive coordinate system for this node.  The associated mapping describes the transformation from the parent system of this node to this target system.  The coordinate systems themselves are described in the IVOA "Astronomical Coordinates and Coordinate Systems" model. 
 </body>
         </ownedComment>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX40QmHEe-zU_mOK6wlpg"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h4ioQmJEe-zU_mOK6wlpg"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX40gmHEe-zU_mOK6wlpg" name="mapping" visibility="public" type="_bAX3YgmHEe-zU_mOK6wlpg" association="_bAX42AmHEe-zU_mOK6wlpg">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX40wmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h4iogmJEe-zU_mOK6wlpg" name="mapping" visibility="public" type="_4h37iAmJEe-zU_mOK6wlpg" association="_4h4iqAmJEe-zU_mOK6wlpg">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h4iowmJEe-zU_mOK6wlpg">
           <body>This is a reference to the mapping relating the parent coordinate system to the target system.  Will be NULL for 'root' nodes.</body>
         </ownedComment>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX41AmHEe-zU_mOK6wlpg"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h4ipAmJEe-zU_mOK6wlpg"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_bAX41QmHEe-zU_mOK6wlpg" memberEnd="_bAX4zAmHEe-zU_mOK6wlpg _bAX41gmHEe-zU_mOK6wlpg">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_bAX41gmHEe-zU_mOK6wlpg" visibility="public" type="_bAX4ygmHEe-zU_mOK6wlpg" association="_bAX41QmHEe-zU_mOK6wlpg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX41wmHEe-zU_mOK6wlpg"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_4h4ipQmJEe-zU_mOK6wlpg" memberEnd="_4h4inAmJEe-zU_mOK6wlpg _4h4ipgmJEe-zU_mOK6wlpg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_4h4ipgmJEe-zU_mOK6wlpg" visibility="public" type="_4h4imgmJEe-zU_mOK6wlpg" association="_4h4ipQmJEe-zU_mOK6wlpg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h4ipwmJEe-zU_mOK6wlpg"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_bAX42AmHEe-zU_mOK6wlpg" memberEnd="_bAX40gmHEe-zU_mOK6wlpg _bAX42QmHEe-zU_mOK6wlpg">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_bAX42QmHEe-zU_mOK6wlpg" visibility="public" type="_bAX4ygmHEe-zU_mOK6wlpg" association="_bAX42AmHEe-zU_mOK6wlpg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX42gmHEe-zU_mOK6wlpg"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_4h4iqAmJEe-zU_mOK6wlpg" memberEnd="_4h4iogmJEe-zU_mOK6wlpg _4h4iqQmJEe-zU_mOK6wlpg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_4h4iqQmJEe-zU_mOK6wlpg" visibility="public" type="_4h4imgmJEe-zU_mOK6wlpg" association="_4h4iqAmJEe-zU_mOK6wlpg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h4iqgmJEe-zU_mOK6wlpg"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX42wmHEe-zU_mOK6wlpg" name="MapRef">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX43AmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h4iqwmJEe-zU_mOK6wlpg" name="MapRef">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h4irAmJEe-zU_mOK6wlpg">
         <body>An entry in the CompountMap component mapping list.  Holds a reference to the component mapping.</body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX43QmHEe-zU_mOK6wlpg" name="ref" visibility="public" type="_bAX3YgmHEe-zU_mOK6wlpg" association="_bAX43wmHEe-zU_mOK6wlpg">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX43gmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h4irQmJEe-zU_mOK6wlpg" name="ref" visibility="public" type="_4h37iAmJEe-zU_mOK6wlpg" association="_4h4irwmJEe-zU_mOK6wlpg">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h4irgmJEe-zU_mOK6wlpg">
           <body>Reference to the component Mapping.</body>
         </ownedComment>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_bAX43wmHEe-zU_mOK6wlpg" memberEnd="_bAX43QmHEe-zU_mOK6wlpg _bAX44AmHEe-zU_mOK6wlpg">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_bAX44AmHEe-zU_mOK6wlpg" visibility="public" type="_bAX42wmHEe-zU_mOK6wlpg" association="_bAX43wmHEe-zU_mOK6wlpg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX44QmHEe-zU_mOK6wlpg"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_4h4irwmJEe-zU_mOK6wlpg" memberEnd="_4h4irQmJEe-zU_mOK6wlpg _4h4isAmJEe-zU_mOK6wlpg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_4h4isAmJEe-zU_mOK6wlpg" visibility="public" type="_4h4iqwmJEe-zU_mOK6wlpg" association="_4h4irwmJEe-zU_mOK6wlpg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h4isQmJEe-zU_mOK6wlpg"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_bAX44gmHEe-zU_mOK6wlpg" name="BiDirectionalMap">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_bAX44wmHEe-zU_mOK6wlpg">
+    <packagedElement xmi:type="uml:Class" xmi:id="_4h4isgmJEe-zU_mOK6wlpg" name="BiDirectionalMap">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4h4iswmJEe-zU_mOK6wlpg">
         <body>The BiDirectionalMap supports cases where one wants to explicitely define independent transforms for the forward and inverse operations.  This may be because a mapping does not have a analytical inverse, or dictated by the requirements of the application.  The associated mappings do not have to be of the same type.  The forward operation of the BiDirectionalMap is supported by the forward operation of the forwardMap, and the inverse operation of the BiDirectionalMap by the inverse operation of the inverseMap.  If the 'invert' flag is True, this is reversed so that the forward operation of the BiDirectionalMap is supported by the inverse operation of the inverseMap, and the inverse operation of the BiDirectionalMap by the forward operation of the forwardMap.</body>
       </ownedComment>
-      <generalization xmi:type="uml:Generalization" xmi:id="_bAX45AmHEe-zU_mOK6wlpg" general="_bAX3YgmHEe-zU_mOK6wlpg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX45QmHEe-zU_mOK6wlpg" name="inverseMap" visibility="public" type="_bAX3YgmHEe-zU_mOK6wlpg" association="_bAX46QmHEe-zU_mOK6wlpg">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX45gmHEe-zU_mOK6wlpg">
+      <generalization xmi:type="uml:Generalization" xmi:id="_4h4itAmJEe-zU_mOK6wlpg" general="_4h37iAmJEe-zU_mOK6wlpg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h4itQmJEe-zU_mOK6wlpg" name="inverseMap" visibility="public" type="_4h37iAmJEe-zU_mOK6wlpg" association="_4h4iuQmJEe-zU_mOK6wlpg">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h4itgmJEe-zU_mOK6wlpg">
           <body>The Mapping that defines the inverse operation of the BiDirectionalMap. The inverse operation of the target Mapping is used as the inverse operation of the BiDirectionalMap. If the inverse operation of the target Mapping is undefined, then the inverse operation of the BiDirectionalMap is also undefined. The forward operation of the target Mapping is never used and may be undefined.</body>
         </ownedComment>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bAX45wmHEe-zU_mOK6wlpg" name="forwardMap" visibility="public" type="_bAX3YgmHEe-zU_mOK6wlpg" association="_bAX47AmHEe-zU_mOK6wlpg">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_bAX46AmHEe-zU_mOK6wlpg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4h4itwmJEe-zU_mOK6wlpg" name="forwardMap" visibility="public" type="_4h37iAmJEe-zU_mOK6wlpg" association="_4h4ivAmJEe-zU_mOK6wlpg">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4h4iuAmJEe-zU_mOK6wlpg">
           <body>The Mapping that defines the foward operation of the BiDirectionalMap. The forward operation of the target Mapping is used as the foward operation of the BiDirectionalMap. If the forward operation of the target Mapping is undefined, then the forward operation of the BiDirectionalMap is also undefined. The inverse operation of the target Mapping is never used and need not be defined.
 </body>
         </ownedComment>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_bAX46QmHEe-zU_mOK6wlpg" memberEnd="_bAX45QmHEe-zU_mOK6wlpg _bAX46gmHEe-zU_mOK6wlpg">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_bAX46gmHEe-zU_mOK6wlpg" visibility="public" type="_bAX44gmHEe-zU_mOK6wlpg" association="_bAX46QmHEe-zU_mOK6wlpg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX46wmHEe-zU_mOK6wlpg"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_4h4iuQmJEe-zU_mOK6wlpg" memberEnd="_4h4itQmJEe-zU_mOK6wlpg _4h4iugmJEe-zU_mOK6wlpg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_4h4iugmJEe-zU_mOK6wlpg" visibility="public" type="_4h4isgmJEe-zU_mOK6wlpg" association="_4h4iuQmJEe-zU_mOK6wlpg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h4iuwmJEe-zU_mOK6wlpg"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_bAX47AmHEe-zU_mOK6wlpg" memberEnd="_bAX45wmHEe-zU_mOK6wlpg _bAX47QmHEe-zU_mOK6wlpg">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_bAX47QmHEe-zU_mOK6wlpg" visibility="public" type="_bAX44gmHEe-zU_mOK6wlpg" association="_bAX47AmHEe-zU_mOK6wlpg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bAX47gmHEe-zU_mOK6wlpg"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_4h4ivAmJEe-zU_mOK6wlpg" memberEnd="_4h4itwmJEe-zU_mOK6wlpg _4h4ivQmJEe-zU_mOK6wlpg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_4h4ivQmJEe-zU_mOK6wlpg" visibility="public" type="_4h4isgmJEe-zU_mOK6wlpg" association="_4h4ivAmJEe-zU_mOK6wlpg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4h4ivgmJEe-zU_mOK6wlpg"/>
       </ownedEnd>
     </packagedElement>
-    <profileApplication xmi:type="uml:ProfileApplication" xmi:applyingPackage="_bAXQUAmHEe-zU_mOK6wlpg" xmi:id="_bApkMAmHEe-zU_mOK6wlpg">
-      <eAnnotations xmi:id="_bApkMQmHEe-zU_mOK6wlpg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="IVOA_UML_Profile.profile.xmi#_bAZFhwmHEe-zU_mOK6wlpg"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:applyingPackage="_4h37gAmJEe-zU_mOK6wlpg" xmi:id="_4jH4sAmJEe-zU_mOK6wlpg">
+      <eAnnotations xmi:id="_4jH4sQmJEe-zU_mOK6wlpg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="IVOA_UML_Profile.profile.xmi#_4i5PNwmJEe-zU_mOK6wlpg"/>
       </eAnnotations>
-      <appliedProfile xmi:type="uml:Profile" xmi:applyingPackage="_bApkMAmHEe-zU_mOK6wlpg" href="IVOA_UML_Profile.profile.xmi#_bAZFgAmHEe-zU_mOK6wlpg"/>
+      <appliedProfile xmi:type="uml:Profile" xmi:applyingPackage="_4jH4sAmJEe-zU_mOK6wlpg" href="IVOA_UML_Profile.profile.xmi#_4i5PMAmJEe-zU_mOK6wlpg"/>
     </profileApplication>
   </uml:Model>
-  <IVOA_UML_Profile:model xmi:id="_bAqyUAmHEe-zU_mOK6wlpg" base_Element="_bAXQUAmHEe-zU_mOK6wlpg" title="WCS Transform Model" version="1.0" authors="Arnold Rots, Mark Cresitello-Dittmar, David Berry, Steven Crawford, Nadia Dencheva, Tim Jenness, Omar Laurino, Stuart Mumford, Erik Tollerud" previousVersion="0.0"/>
-  <IVOA_UML_Profile:modelimport xmi:id="_bArZYAmHEe-zU_mOK6wlpg" base_Element="_bAX4bwmHEe-zU_mOK6wlpg" name="ivoa" version="1.0" url="http://www.ivoa.net/xml/VODML/20180519/IVOA-v1.0.vo-dml.xml" documentationURL="https://www.ivoa.net/documents/VODML/20180910/IVOA-REC-v1.0.html"/>
-  <IVOA_UML_Profile:primitive xmi:id="_bArZYQmHEe-zU_mOK6wlpg" base_Element="_bAX4cAmHEe-zU_mOK6wlpg"/>
-  <IVOA_UML_Profile:modelelement xmi:id="_bArZYgmHEe-zU_mOK6wlpg" base_Element="_bAX4cAmHEe-zU_mOK6wlpg" vodmlid="real"/>
-  <IVOA_UML_Profile:primitive xmi:id="_bArZYwmHEe-zU_mOK6wlpg" base_Element="_bAX4cQmHEe-zU_mOK6wlpg"/>
-  <IVOA_UML_Profile:modelelement xmi:id="_bArZZAmHEe-zU_mOK6wlpg" base_Element="_bAX4cQmHEe-zU_mOK6wlpg" vodmlid="datetime"/>
-  <IVOA_UML_Profile:primitive xmi:id="_bAsAcAmHEe-zU_mOK6wlpg" base_Element="_bAX4cgmHEe-zU_mOK6wlpg"/>
-  <IVOA_UML_Profile:modelelement xmi:id="_bAsAcQmHEe-zU_mOK6wlpg" base_Element="_bAX4cgmHEe-zU_mOK6wlpg" vodmlid="anyURI"/>
-  <IVOA_UML_Profile:primitive xmi:id="_bAsAcgmHEe-zU_mOK6wlpg" base_Element="_bAX4dAmHEe-zU_mOK6wlpg"/>
-  <IVOA_UML_Profile:modelelement xmi:id="_bAsAcwmHEe-zU_mOK6wlpg" base_Element="_bAX4dAmHEe-zU_mOK6wlpg" vodmlid="string"/>
-  <IVOA_UML_Profile:primitive xmi:id="_bAsAdAmHEe-zU_mOK6wlpg" base_Element="_bAX4dQmHEe-zU_mOK6wlpg"/>
-  <IVOA_UML_Profile:modelelement xmi:id="_bAsAdQmHEe-zU_mOK6wlpg" base_Element="_bAX4dQmHEe-zU_mOK6wlpg" vodmlid="nonnegativeInteger"/>
-  <IVOA_UML_Profile:primitive xmi:id="_bAsAdgmHEe-zU_mOK6wlpg" base_Element="_bAX4dgmHEe-zU_mOK6wlpg"/>
-  <IVOA_UML_Profile:modelelement xmi:id="_bAsAdwmHEe-zU_mOK6wlpg" base_Element="_bAX4dgmHEe-zU_mOK6wlpg" vodmlid="boolean"/>
-  <IVOA_UML_Profile:primitive xmi:id="_bAsAeAmHEe-zU_mOK6wlpg" base_Element="_bAX4dwmHEe-zU_mOK6wlpg"/>
-  <IVOA_UML_Profile:modelelement xmi:id="_bAsAeQmHEe-zU_mOK6wlpg" base_Element="_bAX4dwmHEe-zU_mOK6wlpg" vodmlid="integer"/>
-  <IVOA_UML_Profile:primitive xmi:id="_bAsngAmHEe-zU_mOK6wlpg" base_Element="_bAX4eAmHEe-zU_mOK6wlpg"/>
-  <IVOA_UML_Profile:modelelement xmi:id="_bAsngQmHEe-zU_mOK6wlpg" base_Element="_bAX4eAmHEe-zU_mOK6wlpg" vodmlid="rational"/>
-  <IVOA_UML_Profile:primitive xmi:id="_bAsnggmHEe-zU_mOK6wlpg" base_Element="_bAX4eQmHEe-zU_mOK6wlpg"/>
-  <IVOA_UML_Profile:modelelement xmi:id="_bAsngwmHEe-zU_mOK6wlpg" base_Element="_bAX4eQmHEe-zU_mOK6wlpg" vodmlid="complex"/>
-  <IVOA_UML_Profile:primitive xmi:id="_bAsnhAmHEe-zU_mOK6wlpg" base_Element="_bAX4ewmHEe-zU_mOK6wlpg"/>
-  <IVOA_UML_Profile:modelelement xmi:id="_bAsnhQmHEe-zU_mOK6wlpg" base_Element="_bAX4ewmHEe-zU_mOK6wlpg" vodmlid="quantity.Unit"/>
-  <IVOA_UML_Profile:modelelement xmi:id="_bAtOkAmHEe-zU_mOK6wlpg" base_Element="_bAX4fQmHEe-zU_mOK6wlpg" vodmlid="quantity.Quantity"/>
-  <IVOA_UML_Profile:modelelement xmi:id="_bAtOkQmHEe-zU_mOK6wlpg" base_Element="_bAX4gAmHEe-zU_mOK6wlpg" vodmlid="quantity.IntegerQuantity"/>
-  <IVOA_UML_Profile:modelelement xmi:id="_bAtOkgmHEe-zU_mOK6wlpg" base_Element="_bAX4gwmHEe-zU_mOK6wlpg" vodmlid="quantity.RealQuantity"/>
-  <IVOA_UML_Profile:modelimport xmi:id="_bAtOkwmHEe-zU_mOK6wlpg" base_Element="_bAX4vAmHEe-zU_mOK6wlpg" name="coords" version="1.0" url="https://www.ivoa.net/xml/VODML/Coords-v1.0.vo-dml.xml" documentationURL="https://www.ivoa.net/documents/Coords/20221004/Coords-v1.0.html"/>
-  <IVOA_UML_Profile:modelelement xmi:id="_bAtOlAmHEe-zU_mOK6wlpg" base_Element="_bAX4vQmHEe-zU_mOK6wlpg" vodmlid="CoordSys"/>
+  <IVOA_UML_Profile:model xmi:id="_4jJG0AmJEe-zU_mOK6wlpg" base_Element="_4h37gAmJEe-zU_mOK6wlpg" title="WCS Transform Model" version="1.0" authors="Mark Cresitello-Dittmar, David Berry, Steven Crawford, Nadia Dencheva, Tim Jenness, Omar Laurino, Stuart Mumford, Arnold Rots, Erik Tollerud" previousVersion="0.0"/>
+  <IVOA_UML_Profile:modelimport xmi:id="_4jJG0QmJEe-zU_mOK6wlpg" base_Element="_4h38lQmJEe-zU_mOK6wlpg" name="ivoa" version="1.0" url="http://www.ivoa.net/xml/VODML/20180519/IVOA-v1.0.vo-dml.xml" documentationURL="https://www.ivoa.net/documents/VODML/20180910/IVOA-REC-v1.0.html"/>
+  <IVOA_UML_Profile:primitive xmi:id="_4jJt4AmJEe-zU_mOK6wlpg" base_Element="_4h38lgmJEe-zU_mOK6wlpg"/>
+  <IVOA_UML_Profile:modelelement xmi:id="_4jJt4QmJEe-zU_mOK6wlpg" base_Element="_4h38lgmJEe-zU_mOK6wlpg" vodmlid="real"/>
+  <IVOA_UML_Profile:primitive xmi:id="_4jJt4gmJEe-zU_mOK6wlpg" base_Element="_4h38lwmJEe-zU_mOK6wlpg"/>
+  <IVOA_UML_Profile:modelelement xmi:id="_4jJt4wmJEe-zU_mOK6wlpg" base_Element="_4h38lwmJEe-zU_mOK6wlpg" vodmlid="datetime"/>
+  <IVOA_UML_Profile:primitive xmi:id="_4jJt5AmJEe-zU_mOK6wlpg" base_Element="_4h38mAmJEe-zU_mOK6wlpg"/>
+  <IVOA_UML_Profile:modelelement xmi:id="_4jJt5QmJEe-zU_mOK6wlpg" base_Element="_4h38mAmJEe-zU_mOK6wlpg" vodmlid="anyURI"/>
+  <IVOA_UML_Profile:primitive xmi:id="_4jKU8AmJEe-zU_mOK6wlpg" base_Element="_4h38mgmJEe-zU_mOK6wlpg"/>
+  <IVOA_UML_Profile:modelelement xmi:id="_4jKU8QmJEe-zU_mOK6wlpg" base_Element="_4h38mgmJEe-zU_mOK6wlpg" vodmlid="string"/>
+  <IVOA_UML_Profile:primitive xmi:id="_4jKU8gmJEe-zU_mOK6wlpg" base_Element="_4h38mwmJEe-zU_mOK6wlpg"/>
+  <IVOA_UML_Profile:modelelement xmi:id="_4jKU8wmJEe-zU_mOK6wlpg" base_Element="_4h38mwmJEe-zU_mOK6wlpg" vodmlid="nonnegativeInteger"/>
+  <IVOA_UML_Profile:primitive xmi:id="_4jKU9AmJEe-zU_mOK6wlpg" base_Element="_4h38nAmJEe-zU_mOK6wlpg"/>
+  <IVOA_UML_Profile:modelelement xmi:id="_4jKU9QmJEe-zU_mOK6wlpg" base_Element="_4h38nAmJEe-zU_mOK6wlpg" vodmlid="boolean"/>
+  <IVOA_UML_Profile:primitive xmi:id="_4jKU9gmJEe-zU_mOK6wlpg" base_Element="_4h38nQmJEe-zU_mOK6wlpg"/>
+  <IVOA_UML_Profile:modelelement xmi:id="_4jKU9wmJEe-zU_mOK6wlpg" base_Element="_4h38nQmJEe-zU_mOK6wlpg" vodmlid="integer"/>
+  <IVOA_UML_Profile:primitive xmi:id="_4jKU-AmJEe-zU_mOK6wlpg" base_Element="_4h38ngmJEe-zU_mOK6wlpg"/>
+  <IVOA_UML_Profile:modelelement xmi:id="_4jKU-QmJEe-zU_mOK6wlpg" base_Element="_4h38ngmJEe-zU_mOK6wlpg" vodmlid="rational"/>
+  <IVOA_UML_Profile:primitive xmi:id="_4jK8AAmJEe-zU_mOK6wlpg" base_Element="_4h38nwmJEe-zU_mOK6wlpg"/>
+  <IVOA_UML_Profile:modelelement xmi:id="_4jK8AQmJEe-zU_mOK6wlpg" base_Element="_4h38nwmJEe-zU_mOK6wlpg" vodmlid="complex"/>
+  <IVOA_UML_Profile:primitive xmi:id="_4jK8AgmJEe-zU_mOK6wlpg" base_Element="_4h38oQmJEe-zU_mOK6wlpg"/>
+  <IVOA_UML_Profile:modelelement xmi:id="_4jK8AwmJEe-zU_mOK6wlpg" base_Element="_4h38oQmJEe-zU_mOK6wlpg" vodmlid="quantity.Unit"/>
+  <IVOA_UML_Profile:modelelement xmi:id="_4jK8BAmJEe-zU_mOK6wlpg" base_Element="_4h38owmJEe-zU_mOK6wlpg" vodmlid="quantity.Quantity"/>
+  <IVOA_UML_Profile:modelelement xmi:id="_4jK8BQmJEe-zU_mOK6wlpg" base_Element="_4h38pgmJEe-zU_mOK6wlpg" vodmlid="quantity.IntegerQuantity"/>
+  <IVOA_UML_Profile:modelelement xmi:id="_4jK8BgmJEe-zU_mOK6wlpg" base_Element="_4h38qQmJEe-zU_mOK6wlpg" vodmlid="quantity.RealQuantity"/>
+  <IVOA_UML_Profile:modelimport xmi:id="_4jK8BwmJEe-zU_mOK6wlpg" base_Element="_4h384gmJEe-zU_mOK6wlpg" name="coords" version="1.0" url="https://www.ivoa.net/xml/VODML/Coords-v1.0.vo-dml.xml" documentationURL="https://www.ivoa.net/documents/Coords/20221004/Coords-v1.0.html"/>
+  <IVOA_UML_Profile:modelelement xmi:id="_4jK8CAmJEe-zU_mOK6wlpg" base_Element="_4h384wmJEe-zU_mOK6wlpg" vodmlid="CoordSys"/>
 </xmi:XMI>

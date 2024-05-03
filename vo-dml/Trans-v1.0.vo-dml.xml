@@ -13,10 +13,10 @@ Since a mapping expression can involve multiple steps between end points, we sep
 </description>
    <uri/>
    <title>WCS Transform Model</title>
-   <author>Arnold Rots, Mark Cresitello-Dittmar, David Berry, Steven Crawford, Nadia Dencheva, Tim Jenness, Omar Laurino, Stuart Mumford, Erik Tollerud</author>
+   <author>Mark Cresitello-Dittmar, David Berry, Steven Crawford, Nadia Dencheva, Tim Jenness, Omar Laurino, Stuart Mumford, Arnold Rots, Erik Tollerud</author>
    <version>1.0</version>
    <previousVersion>0.0</previousVersion>
-   <lastModified>2024-05-03T19:58:07.190241Z</lastModified>
+   <lastModified>2024-05-03T20:22:55.601510Z</lastModified>
    <import>
       <name>ivoa</name>
       <url>http://www.ivoa.net/xml/VODML/20180519/IVOA-v1.0.vo-dml.xml</url>
